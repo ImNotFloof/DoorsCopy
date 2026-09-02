@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://1wplcrooq0d"]
+
+[ext_resource type="Script" uid="uid://ch6i5kdxsekfx" path="res://Assets/Scipts/door.gd" id="1_8tqrq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[sub_resource type="Animation" id="Animation_remfd"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door_pivot:rotation:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_8tqrq"]
+resource_name = "door_opening"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door_pivot:rotation:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 2.6179938, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tdxg0"]
+_data = {
+&"RESET": SubResource("Animation_remfd"),
+&"door_opening": SubResource("Animation_8tqrq")
+}
+
+[node name="Door" type="Node3D" unique_id=945050413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0.625)
+script = ExtResource("1_8tqrq")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1500373213]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=529595471]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1.5, 0, 0, -0.62481534)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=289245732]
+libraries/ = SubResource("AnimationLibrary_tdxg0")
+
+[node name="Door_pivot" type="Node3D" parent="." unique_id=46257552]
+
+[node name="DoorModel" type="CSGBox3D" parent="Door_pivot" unique_id=491195573]
+transform = Transform3D(0.15, 0, 0, 0, 2.25, 0, 0, 0, 1.25, 0, 0, -0.625)
+use_collision = true
+
+[node name="Label3D" type="Label3D" parent="Door_pivot/DoorModel" unique_id=435306271]
+unique_name_in_owner = true
+transform = Transform3D(-6.644131e-08, 0, 1, 0, 1, 0, -1.52, 0, -4.371139e-08, 0.501, 0.2301507, 0)
+text = "A-000"
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
