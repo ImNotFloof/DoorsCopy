@@ -17,3 +17,12 @@ unique_name_in_owner = true
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=1705025649]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="UI" type="Node2D" parent="." unique_id=619302750]
+
+[node name="Label" type="Label" parent="UI" unique_id=1398695184]
+offset_left = 22.0
+offset_top = 600.0
+offset_right = 120.0
+offset_bottom = 623.0
+text = "HEALTH: 000"
