@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ctujfdyt4ybqy"]
+
+[ext_resource type="Script" uid="uid://dtj8ylic0w2qx" path="res://Assets/Scipts/test_entity.gd" id="1_mmosq"]
+[ext_resource type="Texture2D" uid="uid://bah37qtdmhh0a" path="res://Assets/Images/icon.svg" id="2_3lmbw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[node name="TestEntity" type="AnimatableBody3D" unique_id=1307755709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("1_mmosq")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=841160431]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+billboard = 2
+texture = ExtResource("2_3lmbw")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1032642748]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=679229278]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="damageInterval" type="Timer" parent="." unique_id=1033548960]
+wait_time = 0.1
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

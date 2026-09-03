@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://boqa3hi7tcgju"]
 
 [ext_resource type="PackedScene" uid="uid://clyg0cjpffqq2" path="res://Assets/Scenes/player.tscn" id="1_avm4t"]
+[ext_resource type="PackedScene" uid="uid://ctujfdyt4ybqy" path="res://Assets/Scenes/test_entity.tscn" id="3_lsiy8"]
 [ext_resource type="PackedScene" uid="uid://1wplcrooq0d" path="res://Assets/Scenes/door.tscn" id="3_o8y75"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_avm4t"]
@@ -49,3 +50,12 @@ operation = 2
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D2" unique_id=560331298]
 transform = Transform3D(0.99, 0, 0, 0, 0.95, 0, 0, 0, 0.99, 0, -0.05, 0)
 operation = 2
+
+[node name="TestEntity" parent="." unique_id=1307755709 instance=ExtResource("3_lsiy8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.055599, 2.0101376, -2.1328936)
+
+[node name="damageInterval" parent="TestEntity" index="2" unique_id=1033548960]
+one_shot = true
+autostart = true
+
+[editable path="TestEntity"]

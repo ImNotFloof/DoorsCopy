@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var Health = 100
+@onready var currHealth = $UI/Label.text.split(" ")
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -17,8 +19,8 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 		
-
 func _physics_process(delta: float) -> void:
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -38,3 +40,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	if Health <= 0:
+		get_tree().paused = true
+	if int(currHealth[1]) != Health:
+		currHealth[1] = str(Health)
+		$UI/Label.text = "HEALTH: " + str(Health)
