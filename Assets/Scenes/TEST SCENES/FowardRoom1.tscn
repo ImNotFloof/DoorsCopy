@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dxaq1wog65ek0"]
+
+[ext_resource type="PackedScene" uid="uid://1wplcrooq0d" path="res://Assets/Scenes/door.tscn" id="2_5ksax"]
+
+[node name="Room#" type="Node3D" unique_id=1850740981]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=644858100]
+transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, 0, 1.5, -5)
+
+[node name="Label3D" type="Label3D" parent="CSGBox3D" unique_id=1220179281]
+transform = Transform3D(-6.556708e-08, -1.1, 0, 0, -4.8082526e-08, 0, -1.5, 4.8082526e-08, 0, 0, 0.51, 0)
+text = "->"
+font_size = 128
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D" unique_id=1608809897]
+transform = Transform3D(0.98999995, 0, 0, 0, 0.99, 0, 0, 0, 0.98999995, 0, -0.022534996, 0)
+operation = 2
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D" unique_id=245668087]
+transform = Transform3D(0.125, 0, 0, 0, 1, 0, 0, 0, 5.573, 0, -0.25, 0.00498271)
+operation = 2
+size = Vector3(1, 1, 0.18652344)
+
+[node name="Start" type="Marker3D" parent="." unique_id=102949011]
+
+[node name="End" type="Marker3D" parent="." unique_id=556675216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="Door" parent="." unique_id=945050413 instance=ExtResource("2_5ksax")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.625, 1.125, 0)
