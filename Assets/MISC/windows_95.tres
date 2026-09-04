@@ -1111,4 +1111,5 @@ TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_p1u0y")
 TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_x641d")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_7numd")
 clock/base_type = &"Button"
+clock/styles/disabled = SubResource("StyleBoxTexture_td3hd")
 clock/styles/normal = SubResource("StyleBoxTexture_td3hd")
