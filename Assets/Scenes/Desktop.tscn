@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://cl3rkni5a4aqk"]
+
+[ext_resource type="Shader" uid="uid://dn3kdlhadykk0" path="res://Assets/Scenes/Desktop.gdshader" id="1_kxpr5"]
+[ext_resource type="Texture2D" uid="uid://dnta68k63slrw" path="res://Assets/Images/a7a20e9a4c0c5ed6af6cbaf3c268d701.jpg" id="1_nnm0i"]
+[ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="2_nw76e"]
+[ext_resource type="Texture2D" uid="uid://cnd8jhciddjeg" path="res://Assets/Images/Scan CD.png" id="3_nw76e"]
+[ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Start.png" id="4_l5xuu"]
+[ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Run Program.png" id="5_kxpr5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ld7oy"]
+shader = ExtResource("1_kxpr5")
+shader_parameter/curvature = 2.0
+shader_parameter/scanline_count = 300.0
+shader_parameter/scanline_opacity = 0.25
+shader_parameter/vignette_opacity = 0.3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4v7s"]
+shader = ExtResource("1_kxpr5")
+shader_parameter/curvature = 2.0
+shader_parameter/scanline_count = 300.0
+shader_parameter/scanline_opacity = 0.25
+shader_parameter/vignette_opacity = 0.3
+
+[node name="Node2D" type="Node2D" unique_id=1529589146]
+material = SubResource("ShaderMaterial_ld7oy")
+use_parent_material = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=461657659]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1479575793]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nnm0i")
+
+[node name="GameButton" type="Button" parent="CanvasLayer" unique_id=2059911867]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_nw76e")
+theme_type_variation = &"Desktop_Button"
+action_mode = 0
+keep_pressed_outside = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/GameButton" unique_id=1830319871]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/GameButton/VBoxContainer" unique_id=1942918221]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 15)
+offset_transform_scale = Vector2(1, 2)
+texture = ExtResource("3_nw76e")
+
+[node name="Label" type="Label" parent="CanvasLayer/GameButton/VBoxContainer" unique_id=827954620]
+layout_mode = 2
+text = "Game"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=151719506]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect" unique_id=1979562130]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 1725
+alignment = 1
+
+[node name="Start" type="Button" parent="CanvasLayer/ColorRect/HBoxContainer" unique_id=724769491]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.9)
+theme = ExtResource("2_nw76e")
+text = "Start"
+icon = ExtResource("4_l5xuu")
+
+[node name="Button" type="Button" parent="CanvasLayer/ColorRect/HBoxContainer" unique_id=807426216]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.9)
+theme = ExtResource("2_nw76e")
+theme_type_variation = &"clock"
+text = "00:00"
+icon = ExtResource("5_kxpr5")
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=466690105]
+material = SubResource("ShaderMaterial_g4v7s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
