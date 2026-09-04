@@ -19,9 +19,11 @@ texture = ExtResource("2_p5o3w")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=679229278]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 shape = SubResource("BoxShape3D_g4v7s")
+debug_color = Color(0, 11.708403, 13.469126, 1)
 
 [node name="damageInterval" type="Timer" parent="." unique_id=1033548960]
 wait_time = 0.1
+one_shot = true
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

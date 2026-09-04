@@ -1,8 +1,9 @@
 extends CharacterBody3D
 
 var Health = 100
-@onready var currHealth = $UI/Label.text.split(" ")
+@onready var currHealth = $UI/CanvasLayer/Label.text.split(" ")
 
+var paused = false
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const SENSITIVITY = 0.003
@@ -24,7 +25,16 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
+	# Handle menu.
+	if Input.is_action_just_pressed("pause"):
+		print("paused")
+		print(paused)
+		paused = !paused
+		%Desktop.visible = !%Desktop.visible
+		if %Desktop.visible:
+			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -39,11 +49,20 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
+	
 	move_and_slide()
 
 func _process(delta: float) -> void:
+	if paused:
+		get_tree().paused = true
 	if Health <= 0:
 		get_tree().paused = true
 	if int(currHealth[1]) != Health:
 		currHealth[1] = str(Health)
-		$UI/Label.text = "HEALTH: " + str(Health)
+		$UI/CanvasLayer/Label.text = "HEALTH: " + str(Health)
+
+func unpaused():
+	print("UNPAUSED!")
+	paused = false
+	%Desktop.visible = false
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
