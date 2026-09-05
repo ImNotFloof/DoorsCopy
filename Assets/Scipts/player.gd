@@ -13,6 +13,7 @@ const SENSITIVITY = 0.003
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	%Desktop.visible = false
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -27,11 +28,14 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	# Handle menu.
-	if Input.is_action_just_pressed("pause"):
+	if Input.is_action_just_pressed("pause") and not %Desktop.find_child("AnimationPlayer").is_playing():
+		
 		print("paused")
-		print(paused)
+
 		paused = !paused
 		%Desktop.visible = !%Desktop.visible
+		%Desktop.find_child("AnimationPlayer").play("Pause")
+		
 		if %Desktop.visible:
 			Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	
@@ -64,5 +68,8 @@ func _process(delta: float) -> void:
 func unpaused():
 	print("UNPAUSED!")
 	paused = false
+	%Desktop.find_child("AnimationPlayer").play("JoinGame")
+	await %Desktop.find_child("AnimationPlayer").animation_finished
+	
 	%Desktop.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

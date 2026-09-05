@@ -37,6 +37,5 @@ text = "HEALTH: 000"
 [node name="Desktop" parent="." unique_id=1529589146 instance=ExtResource("2_7dd06")]
 unique_name_in_owner = true
 process_mode = 3
-visible = false
 
 [editable path="Desktop"]

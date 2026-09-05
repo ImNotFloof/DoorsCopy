@@ -8,11 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Start.png" id="4_l5xuu"]
 [ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Run Program.png" id="5_kxpr5"]
 [ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/StartButton.gd" id="5_of8w3"]
+[ext_resource type="Texture2D" uid="uid://d3nbp3wym3w2g" path="res://Assets/Images/Documents.png" id="6_1wx8f"]
 [ext_resource type="Texture2D" uid="uid://b1pl3247p02ie" path="res://Assets/Images/UI/cursor.png" id="7_3v306"]
+[ext_resource type="Texture2D" uid="uid://dbg36lyy27ppc" path="res://Assets/Images/UI/point down.png" id="7_vkad1"]
+[ext_resource type="Texture2D" uid="uid://dfhixxmidho8d" path="res://Assets/Images/Settings.png" id="8_bu5rx"]
 [ext_resource type="Script" uid="uid://bt5p7lc06abcx" path="res://Assets/Scipts/Cursor.gd" id="8_of8w3"]
 [ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/clock.gd" id="9_m3cyw"]
 [ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="9_nc3c7"]
+[ext_resource type="Texture2D" uid="uid://d3l2il6hfp0jl" path="res://Assets/Images/Help.png" id="9_poekv"]
+[ext_resource type="Texture2D" uid="uid://djbtvmc26lm22" path="res://Assets/Images/My Computer.png" id="10_2kahr"]
 [ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/UI/ButtonNormal.png" id="10_36ojc"]
+[ext_resource type="Script" uid="uid://bjqjfxnblrkbv" path="res://Assets/Scenes/shut_down.gd" id="11_vkad1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
 shader = ExtResource("1_kxpr5")
@@ -20,7 +26,7 @@ shader_parameter/brightness = 1.226000058235
 shader_parameter/contrast = 1.08
 shader_parameter/saturation = 1.1
 shader_parameter/gamma = 1.05
-shader_parameter/curvature = 0.09200000437
+shader_parameter/curvature = 0.050000002375
 shader_parameter/corner_soften = 0.010000000475
 shader_parameter/vignette = 0.150000007125
 shader_parameter/scanline_strength = 0.27200001292
@@ -38,6 +44,195 @@ shader_parameter/roll_speed = 0.1
 shader_parameter/roll_strength = 0.15
 shader_parameter/glow_strength = 0.25
 shader_parameter/glow_threshold = 0.65
+
+[sub_resource type="Animation" id="Animation_3jx0j"]
+resource_name = "JoinGame"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SHADER OVERLAY:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.61, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(118.245, 43.61), Vector2(1208.244, 349.984), Vector2(1920, 1080)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.235, 0.235)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_x365e"]
+resource_name = "JoinGame"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SHADER OVERLAY:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.53333336, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.83333325, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1920, 1080), Vector2(1208.244, 349.984), Vector2(118.245, 43.61), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.235, 0.235), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_rxxrc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SHADER OVERLAY:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bu5rx"]
+resource_name = "ShutDown"
+length = 0.13999999999999999
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 0.02538286),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x365e"]
+_data = {
+&"JoinGame": SubResource("Animation_3jx0j"),
+&"Pause": SubResource("Animation_x365e"),
+&"RESET": SubResource("Animation_rxxrc"),
+&"ShutDown": SubResource("Animation_bu5rx")
+}
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=461657659]
 
@@ -111,21 +306,22 @@ mouse_filter = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TaskBar/StartMenu" unique_id=912388474]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = -9
 
-[node name="ColorRect" type="ColorRect" parent="TaskBar/StartMenu/HBoxContainer" unique_id=1155726037]
+[node name="Windows95strip" type="ColorRect" parent="TaskBar/StartMenu/HBoxContainer" unique_id=1155726037]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
 offset_transform_enabled = true
-offset_transform_position = Vector2(-31, 0)
-offset_transform_scale = Vector2(0.33, 1)
 color = Color(0.50140685, 0.5014064, 0.5014066, 1)
 
-[node name="Control" type="Control" parent="TaskBar/StartMenu/HBoxContainer/ColorRect" unique_id=467008063]
+[node name="Control" type="Control" parent="TaskBar/StartMenu/HBoxContainer/Windows95strip" unique_id=467008063]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -137,11 +333,11 @@ grow_vertical = 0
 offset_transform_enabled = true
 offset_transform_rotation = -1.5707964
 
-[node name="RichTextLabel" type="RichTextLabel" parent="TaskBar/StartMenu/HBoxContainer/ColorRect/Control" unique_id=2076959744]
+[node name="RichTextLabel" type="RichTextLabel" parent="TaskBar/StartMenu/HBoxContainer/Windows95strip/Control" unique_id=2076959744]
 layout_mode = 0
 offset_right = 500.0
-offset_bottom = 95.0
-scale = Vector2(1.75, 4.17)
+offset_bottom = 96.645
+scale = Vector2(2.165, 1.97)
 theme_override_colors/default_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 theme_override_fonts/normal_font = ExtResource("9_nc3c7")
 bbcode_enabled = true
@@ -149,27 +345,97 @@ text = "[b]Windows[/b]95"
 fit_content = true
 scroll_active = false
 
-[node name="ColorRect2" type="ColorRect" parent="TaskBar/StartMenu/HBoxContainer" unique_id=569735388]
+[node name="Select" type="ColorRect" parent="TaskBar/StartMenu/HBoxContainer" unique_id=569735388]
 layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_enabled = true
-offset_transform_position = Vector2(-36, 0)
-offset_transform_scale = Vector2(1.7, 1)
 color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TaskBar/StartMenu/HBoxContainer/ColorRect2" unique_id=1331748282]
-layout_mode = 0
-offset_left = -100.0
-offset_right = -4.0
-offset_bottom = 300.0
+[node name="VBoxContainer" type="VBoxContainer" parent="TaskBar/StartMenu/HBoxContainer/Select" unique_id=1331748282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
+offset_transform_position = Vector2(-36, 0)
+offset_transform_scale = Vector2(1.7, 1)
+theme = ExtResource("2_nw76e")
+alignment = 2
+
+[node name="Documents" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=384580955]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Documents"
+icon = ExtResource("6_1wx8f")
+flat = true
+alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Documents" unique_id=1682480572]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("7_vkad1")
+
+[node name="Settings" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=1895257343]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Settings"
+icon = ExtResource("8_bu5rx")
+flat = true
+alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Settings" unique_id=968897911]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("7_vkad1")
+
+[node name="Help" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=672555183]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Help"
+icon = ExtResource("9_poekv")
+flat = true
+alignment = 0
+
+[node name="Shut Down" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=353250596]
+layout_mode = 2
 offset_transform_enabled = true
+theme = ExtResource("2_nw76e")
+theme_override_font_sizes/font_size = 18
+text = "Shut Down"
+icon = ExtResource("10_2kahr")
+alignment = 0
+script = ExtResource("11_vkad1")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="TaskBar/StartMenu" unique_id=2135928503]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 50.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_36ojc")
@@ -233,5 +499,19 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=386079565]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_x365e")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=232187808]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
 [connection signal="pressed" from="GameButton" to="GameButton" method="_on_pressed"]
+[connection signal="pressed" from="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" to="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" method="_on_pressed"]
 [connection signal="toggled" from="TaskBar/HBoxContainer/Start" to="TaskBar/HBoxContainer/Start" method="_on_toggled"]
