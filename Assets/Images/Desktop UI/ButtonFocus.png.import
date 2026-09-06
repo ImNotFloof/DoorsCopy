@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jbq7ov1xt2ds"
-path="res://.godot/imported/Time.png-143716e8f6f2b664adc92333fd143a38.ctex"
+uid="uid://dh1dis7b4khiq"
+path="res://.godot/imported/ButtonFocus.png-50be60fb661c9efc0ed5dc40e5e99d62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/UI/Time.png"
-dest_files=["res://.godot/imported/Time.png-143716e8f6f2b664adc92333fd143a38.ctex"]
+source_file="res://Assets/Images/Desktop UI/ButtonFocus.png"
+dest_files=["res://.godot/imported/ButtonFocus.png-50be60fb661c9efc0ed5dc40e5e99d62.ctex"]
 
 [params]
 

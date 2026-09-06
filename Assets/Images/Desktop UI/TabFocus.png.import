@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh1dis7b4khiq"
-path="res://.godot/imported/ButtonFocus.png-cedd2e4c44a3562dc823ee0b3b8424b7.ctex"
+uid="uid://c2ibspis1wnwa"
+path="res://.godot/imported/TabFocus.png-630463dbce6ada9cd0239ad9121111c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/UI/ButtonFocus.png"
-dest_files=["res://.godot/imported/ButtonFocus.png-cedd2e4c44a3562dc823ee0b3b8424b7.ctex"]
+source_file="res://Assets/Images/Desktop UI/TabFocus.png"
+dest_files=["res://.godot/imported/TabFocus.png-630463dbce6ada9cd0239ad9121111c9.ctex"]
 
 [params]
 

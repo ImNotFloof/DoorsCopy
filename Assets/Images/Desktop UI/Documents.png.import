@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbg36lyy27ppc"
-path="res://.godot/imported/point down.png-931abb195a36864085f1b3a85afaf6b0.ctex"
+uid="uid://d3nbp3wym3w2g"
+path="res://.godot/imported/Documents.png-2f07da31655d7fad4600cdb889d08c18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/UI/point down.png"
-dest_files=["res://.godot/imported/point down.png-931abb195a36864085f1b3a85afaf6b0.ctex"]
+source_file="res://Assets/Images/Desktop UI/Documents.png"
+dest_files=["res://.godot/imported/Documents.png-2f07da31655d7fad4600cdb889d08c18.ctex"]
 
 [params]
 

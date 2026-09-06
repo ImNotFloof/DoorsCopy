@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://clyg0cjpffqq2"]
 
 [ext_resource type="Script" uid="uid://pe3w880fiw4i" path="res://Assets/Scipts/player.gd" id="1_6cd4h"]
-[ext_resource type="PackedScene" uid="uid://cl3rkni5a4aqk" path="res://Assets/Scenes/Desktop.tscn" id="2_7dd06"]
+[ext_resource type="PackedScene" uid="uid://cl3rkni5a4aqk" path="res://Assets/Scenes/UI specific/Desktop.tscn" id="2_7dd06"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
 

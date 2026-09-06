@@ -1,27 +1,29 @@
 [gd_scene format=3 uid="uid://cl3rkni5a4aqk"]
 
-[ext_resource type="Shader" uid="uid://dn3kdlhadykk0" path="res://Assets/MISC/Desktop.gdshader" id="1_kxpr5"]
-[ext_resource type="Texture2D" uid="uid://dnta68k63slrw" path="res://Assets/Images/a7a20e9a4c0c5ed6af6cbaf3c268d701.jpg" id="1_nnm0i"]
-[ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="2_nw76e"]
-[ext_resource type="Script" uid="uid://caw6dst1oymld" path="res://Assets/Scipts/game_button.gd" id="3_3jx0j"]
-[ext_resource type="Texture2D" uid="uid://cnd8jhciddjeg" path="res://Assets/Images/Scan CD.png" id="3_nw76e"]
-[ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Start.png" id="4_l5xuu"]
-[ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Run Program.png" id="5_kxpr5"]
-[ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/StartButton.gd" id="5_of8w3"]
-[ext_resource type="Texture2D" uid="uid://d3nbp3wym3w2g" path="res://Assets/Images/Documents.png" id="6_1wx8f"]
-[ext_resource type="Texture2D" uid="uid://b1pl3247p02ie" path="res://Assets/Images/UI/cursor.png" id="7_3v306"]
-[ext_resource type="Texture2D" uid="uid://dbg36lyy27ppc" path="res://Assets/Images/UI/point down.png" id="7_vkad1"]
-[ext_resource type="Texture2D" uid="uid://dfhixxmidho8d" path="res://Assets/Images/Settings.png" id="8_bu5rx"]
-[ext_resource type="Script" uid="uid://bt5p7lc06abcx" path="res://Assets/Scipts/Cursor.gd" id="8_of8w3"]
-[ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/clock.gd" id="9_m3cyw"]
-[ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="9_nc3c7"]
-[ext_resource type="Texture2D" uid="uid://d3l2il6hfp0jl" path="res://Assets/Images/Help.png" id="9_poekv"]
-[ext_resource type="Texture2D" uid="uid://djbtvmc26lm22" path="res://Assets/Images/My Computer.png" id="10_2kahr"]
-[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/UI/ButtonNormal.png" id="10_36ojc"]
-[ext_resource type="Script" uid="uid://bjqjfxnblrkbv" path="res://Assets/Scenes/shut_down.gd" id="11_vkad1"]
+[ext_resource type="Texture2D" uid="uid://dnta68k63slrw" path="res://Assets/Images/Desktop UI/a7a20e9a4c0c5ed6af6cbaf3c268d701.jpg" id="1_l8avd"]
+[ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="2_i70kn"]
+[ext_resource type="Script" uid="uid://caw6dst1oymld" path="res://Assets/Scipts/UI scripts/game_button.gd" id="3_yl31h"]
+[ext_resource type="Texture2D" uid="uid://cnd8jhciddjeg" path="res://Assets/Images/Desktop UI/Scan CD.png" id="4_n6d85"]
+[ext_resource type="PackedScene" uid="uid://bwrwvsqeingd6" path="res://Assets/Scenes/UI specific/DraggableControl.tscn" id="5_c7leg"]
+[ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="6_fun03"]
+[ext_resource type="Texture2D" uid="uid://d3nbp3wym3w2g" path="res://Assets/Images/Desktop UI/Documents.png" id="7_dv6ij"]
+[ext_resource type="Texture2D" uid="uid://dbg36lyy27ppc" path="res://Assets/Images/Desktop UI/point down.png" id="8_ebjp5"]
+[ext_resource type="Script" uid="uid://b2a5p6kmdrx5e" path="res://Assets/Scipts/UI scripts/OpenWindow.gd" id="8_i70kn"]
+[ext_resource type="Texture2D" uid="uid://dfhixxmidho8d" path="res://Assets/Images/Desktop UI/Settings.png" id="9_320vu"]
+[ext_resource type="Texture2D" uid="uid://d3l2il6hfp0jl" path="res://Assets/Images/Desktop UI/Help.png" id="10_1kmf2"]
+[ext_resource type="Texture2D" uid="uid://djbtvmc26lm22" path="res://Assets/Images/Desktop UI/My Computer.png" id="11_473ky"]
+[ext_resource type="Script" uid="uid://bjqjfxnblrkbv" path="res://Assets/Scipts/UI scripts/shut_down.gd" id="12_ww78h"]
+[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/Desktop UI/ButtonNormal.png" id="13_h5gvx"]
+[ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Desktop UI/Start.png" id="14_8am88"]
+[ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/UI scripts/StartButton.gd" id="15_sl2cf"]
+[ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Desktop UI/Run Program.png" id="16_nuhqm"]
+[ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/UI scripts/clock.gd" id="17_ltr8g"]
+[ext_resource type="Texture2D" uid="uid://b1pl3247p02ie" path="res://Assets/Images/Desktop UI/cursor.png" id="18_njsvr"]
+[ext_resource type="Script" uid="uid://bt5p7lc06abcx" path="res://Assets/Scipts/UI scripts/Cursor.gd" id="19_7g4r3"]
+[ext_resource type="Shader" uid="uid://dn3kdlhadykk0" path="res://Assets/MISC/Desktop.gdshader" id="20_ypai7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
-shader = ExtResource("1_kxpr5")
+shader = ExtResource("20_ypai7")
 shader_parameter/brightness = 1.226000058235
 shader_parameter/contrast = 1.08
 shader_parameter/saturation = 1.1
@@ -212,7 +214,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_bu5rx"]
 resource_name = "ShutDown"
-length = 0.13999999999999999
+length = 0.14
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -242,7 +244,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_nnm0i")
+texture = ExtResource("1_l8avd")
 
 [node name="GameButton" type="Button" parent="." unique_id=2059911867]
 anchors_preset = 8
@@ -256,11 +258,11 @@ offset_right = 48.0
 offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_i70kn")
 theme_type_variation = &"Desktop_Button"
 action_mode = 0
 keep_pressed_outside = true
-script = ExtResource("3_3jx0j")
+script = ExtResource("3_yl31h")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameButton" unique_id=1830319871]
 layout_mode = 1
@@ -276,12 +278,30 @@ layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 15)
 offset_transform_scale = Vector2(1, 2)
-texture = ExtResource("3_nw76e")
+texture = ExtResource("4_n6d85")
 
 [node name="Label" type="Label" parent="GameButton/VBoxContainer" unique_id=827954620]
 layout_mode = 2
 text = "Game"
 horizontal_alignment = 1
+
+[node name="Windows" type="Control" parent="." unique_id=307675604]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_i70kn")
+
+[node name="Settings" parent="Windows" unique_id=410319655 instance=ExtResource("5_c7leg")]
+visible = false
+layout_mode = 1
+
+[node name="Documents" parent="Windows" unique_id=1537650527 instance=ExtResource("5_c7leg")]
+visible = false
+layout_mode = 1
 
 [node name="TaskBar" type="ColorRect" parent="." unique_id=151719506]
 anchors_preset = 12
@@ -339,7 +359,7 @@ offset_right = 500.0
 offset_bottom = 96.645
 scale = Vector2(2.165, 1.97)
 theme_override_colors/default_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
-theme_override_fonts/normal_font = ExtResource("9_nc3c7")
+theme_override_fonts/normal_font = ExtResource("6_fun03")
 bbcode_enabled = true
 text = "[b]Windows[/b]95"
 fit_content = true
@@ -361,16 +381,17 @@ grow_vertical = 2
 size_flags_horizontal = 3
 offset_transform_position = Vector2(-36, 0)
 offset_transform_scale = Vector2(1.7, 1)
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_i70kn")
 alignment = 2
 
 [node name="Documents" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=384580955]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Documents"
-icon = ExtResource("6_1wx8f")
+icon = ExtResource("7_dv6ij")
 flat = true
 alignment = 0
+script = ExtResource("8_i70kn")
 
 [node name="TextureRect" type="TextureRect" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Documents" unique_id=1682480572]
 layout_mode = 1
@@ -386,15 +407,16 @@ grow_horizontal = 0
 grow_vertical = 2
 rotation = -1.5707964
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("7_vkad1")
+texture = ExtResource("8_ebjp5")
 
 [node name="Settings" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=1895257343]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Settings"
-icon = ExtResource("8_bu5rx")
+icon = ExtResource("9_320vu")
 flat = true
 alignment = 0
+script = ExtResource("8_i70kn")
 
 [node name="TextureRect" type="TextureRect" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Settings" unique_id=968897911]
 layout_mode = 1
@@ -410,25 +432,25 @@ grow_horizontal = 0
 grow_vertical = 2
 rotation = -1.5707964
 pivot_offset_ratio = Vector2(0.5, 0.5)
-texture = ExtResource("7_vkad1")
+texture = ExtResource("8_ebjp5")
 
 [node name="Help" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=672555183]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Help"
-icon = ExtResource("9_poekv")
+icon = ExtResource("10_1kmf2")
 flat = true
 alignment = 0
 
 [node name="Shut Down" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=353250596]
 layout_mode = 2
 offset_transform_enabled = true
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_i70kn")
 theme_override_font_sizes/font_size = 18
 text = "Shut Down"
-icon = ExtResource("10_2kahr")
+icon = ExtResource("11_473ky")
 alignment = 0
-script = ExtResource("11_vkad1")
+script = ExtResource("12_ww78h")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="TaskBar/StartMenu" unique_id=2135928503]
 layout_mode = 1
@@ -438,7 +460,7 @@ anchor_bottom = 1.0
 offset_right = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("10_36ojc")
+texture = ExtResource("13_h5gvx")
 draw_center = false
 patch_margin_left = 2
 patch_margin_top = 2
@@ -454,36 +476,40 @@ anchor_bottom = 1.0
 offset_top = -40.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 1720
 alignment = 1
 
 [node name="Start" type="Button" parent="TaskBar/HBoxContainer" unique_id=724769491]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(1, 0.9)
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_i70kn")
 toggle_mode = true
 text = "Start"
-icon = ExtResource("4_l5xuu")
-script = ExtResource("5_of8w3")
+icon = ExtResource("14_8am88")
+script = ExtResource("15_sl2cf")
+
+[node name="Tabs" type="HBoxContainer" parent="TaskBar/HBoxContainer" unique_id=375880093]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Clock" type="Button" parent="TaskBar/HBoxContainer" unique_id=807426216]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(1, 0.9)
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_i70kn")
 theme_type_variation = &"clock"
 disabled = true
 text = "00:00"
-icon = ExtResource("5_kxpr5")
-script = ExtResource("9_m3cyw")
+icon = ExtResource("16_nuhqm")
+script = ExtResource("17_ltr8g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1239548530]
 position = Vector2(892.99994, 533)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("7_3v306")
+texture = ExtResource("18_njsvr")
 centered = false
-script = ExtResource("8_of8w3")
+script = ExtResource("19_7g4r3")
 
 [node name="SHADER OVERLAY" type="ColorRect" parent="." unique_id=2034214638]
 material = SubResource("ShaderMaterial_yf5fn")

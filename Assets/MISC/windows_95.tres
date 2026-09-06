@@ -1,12 +1,12 @@
 [gd_resource type="Theme" format=4 uid="uid://gmg4ybdthhox"]
 
 [ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="1_ywrxg"]
-[ext_resource type="Texture2D" uid="uid://dh1dis7b4khiq" path="res://Assets/Images/UI/ButtonFocus.png" id="2_ikkse"]
-[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/UI/ButtonNormal.png" id="3_1tho0"]
-[ext_resource type="Texture2D" uid="uid://idp5r733k2pf" path="res://Assets/Images/UI/ButtonPressed.png" id="4_3jmln"]
-[ext_resource type="Texture2D" uid="uid://c2ibspis1wnwa" path="res://Assets/Images/UI/TabFocus.png" id="5_1tho0"]
-[ext_resource type="Texture2D" uid="uid://beif5nnixqfql" path="res://Assets/Images/UI/TabNormal.png" id="6_3jmln"]
-[ext_resource type="Texture2D" uid="uid://jbq7ov1xt2ds" path="res://Assets/Images/UI/Time.png" id="7_3jmln"]
+[ext_resource type="Texture2D" uid="uid://dh1dis7b4khiq" path="res://Assets/Images/Desktop UI/ButtonFocus.png" id="2_ikkse"]
+[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/Desktop UI/ButtonNormal.png" id="3_1tho0"]
+[ext_resource type="Texture2D" uid="uid://idp5r733k2pf" path="res://Assets/Images/Desktop UI/ButtonPressed.png" id="4_3jmln"]
+[ext_resource type="Texture2D" uid="uid://c2ibspis1wnwa" path="res://Assets/Images/Desktop UI/TabFocus.png" id="5_1tho0"]
+[ext_resource type="Texture2D" uid="uid://beif5nnixqfql" path="res://Assets/Images/Desktop UI/TabNormal.png" id="6_3jmln"]
+[ext_resource type="Texture2D" uid="uid://jbq7ov1xt2ds" path="res://Assets/Images/Desktop UI/Time.png" id="7_3jmln"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
 texture = ExtResource("3_1tho0")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfhixxmidho8d"
-path="res://.godot/imported/Settings.png-f8a4bab25e5b9ad9b7261cf90fc50f56.ctex"
+uid="uid://dconoiby6vpfp"
+path="res://.godot/imported/Drag Size icon.png-ea9f76e4c8fb9fa392c0dc615195dead.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Settings.png"
-dest_files=["res://.godot/imported/Settings.png-f8a4bab25e5b9ad9b7261cf90fc50f56.ctex"]
+source_file="res://Assets/Images/Desktop UI/Drag Size icon.png"
+dest_files=["res://.godot/imported/Drag Size icon.png-ea9f76e4c8fb9fa392c0dc615195dead.ctex"]
 
 [params]
 

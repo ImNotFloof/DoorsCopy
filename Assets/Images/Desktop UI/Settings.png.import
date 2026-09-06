@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnd8jhciddjeg"
-path="res://.godot/imported/Scan CD.png-0324426db0fb5c57e1f1a5001f8c5316.ctex"
+uid="uid://dfhixxmidho8d"
+path="res://.godot/imported/Settings.png-3f63c17ee169205d165c5ed3098acc7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/Scan CD.png"
-dest_files=["res://.godot/imported/Scan CD.png-0324426db0fb5c57e1f1a5001f8c5316.ctex"]
+source_file="res://Assets/Images/Desktop UI/Settings.png"
+dest_files=["res://.godot/imported/Settings.png-3f63c17ee169205d165c5ed3098acc7e.ctex"]
 
 [params]
 
