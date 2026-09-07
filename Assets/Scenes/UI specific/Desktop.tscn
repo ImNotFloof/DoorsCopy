@@ -4,17 +4,25 @@
 [ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="2_i70kn"]
 [ext_resource type="Script" uid="uid://caw6dst1oymld" path="res://Assets/Scipts/UI scripts/game_button.gd" id="3_yl31h"]
 [ext_resource type="Texture2D" uid="uid://cnd8jhciddjeg" path="res://Assets/Images/Desktop UI/Scan CD.png" id="4_n6d85"]
-[ext_resource type="PackedScene" uid="uid://bwrwvsqeingd6" path="res://Assets/Scenes/UI specific/DraggableControl.tscn" id="5_c7leg"]
+[ext_resource type="Script" uid="uid://cgmytp4nuatfm" path="res://Assets/Scipts/UI scripts/WindowControl.gd" id="5_1kmf2"]
+[ext_resource type="FontFile" uid="uid://cdkm0a0xsxfbh" path="res://Assets/MISC/ms-sans-serif-bold.otf.woff2" id="6_473ky"]
 [ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="6_fun03"]
 [ext_resource type="Texture2D" uid="uid://d3nbp3wym3w2g" path="res://Assets/Images/Desktop UI/Documents.png" id="7_dv6ij"]
 [ext_resource type="Texture2D" uid="uid://dbg36lyy27ppc" path="res://Assets/Images/Desktop UI/point down.png" id="8_ebjp5"]
 [ext_resource type="Script" uid="uid://b2a5p6kmdrx5e" path="res://Assets/Scipts/UI scripts/OpenWindow.gd" id="8_i70kn"]
+[ext_resource type="Texture2D" uid="uid://cygdrccnk7atp" path="res://Assets/Images/Desktop UI/Minimize.png" id="8_ww78h"]
 [ext_resource type="Texture2D" uid="uid://dfhixxmidho8d" path="res://Assets/Images/Desktop UI/Settings.png" id="9_320vu"]
+[ext_resource type="Script" uid="uid://b36er1hcroyp8" path="res://Assets/Scipts/UI scripts/Minimize.gd" id="9_h5gvx"]
 [ext_resource type="Texture2D" uid="uid://d3l2il6hfp0jl" path="res://Assets/Images/Desktop UI/Help.png" id="10_1kmf2"]
+[ext_resource type="Texture2D" uid="uid://do8kkpqx1s2mc" path="res://Assets/Images/Desktop UI/Maximize.png" id="10_8am88"]
 [ext_resource type="Texture2D" uid="uid://djbtvmc26lm22" path="res://Assets/Images/Desktop UI/My Computer.png" id="11_473ky"]
+[ext_resource type="Texture2D" uid="uid://s7cjj2brtkpb" path="res://Assets/Images/Desktop UI/Close.png" id="11_sl2cf"]
+[ext_resource type="Script" uid="uid://bp2adkc4p5yk8" path="res://Assets/Scipts/UI scripts/CloseWindow.gd" id="12_nuhqm"]
 [ext_resource type="Script" uid="uid://bjqjfxnblrkbv" path="res://Assets/Scipts/UI scripts/shut_down.gd" id="12_ww78h"]
 [ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/Desktop UI/ButtonNormal.png" id="13_h5gvx"]
+[ext_resource type="Texture2D" uid="uid://6e8avqrbr272" path="res://Assets/Images/Desktop UI/Statusbar.png" id="13_ltr8g"]
 [ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Desktop UI/Start.png" id="14_8am88"]
+[ext_resource type="Texture2D" uid="uid://dconoiby6vpfp" path="res://Assets/Images/Desktop UI/Drag Size icon.png" id="15_njsvr"]
 [ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/UI scripts/StartButton.gd" id="15_sl2cf"]
 [ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Desktop UI/Run Program.png" id="16_nuhqm"]
 [ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/UI scripts/clock.gd" id="17_ltr8g"]
@@ -202,7 +210,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ColorRect:color")
+tracks/4/path = NodePath("GOES BELOW SHADER:color")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -218,7 +226,7 @@ length = 0.14
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
+tracks/0/path = NodePath("GOES BELOW SHADER:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -293,15 +301,852 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme = ExtResource("2_i70kn")
 
-[node name="Settings" parent="Windows" unique_id=410319655 instance=ExtResource("5_c7leg")]
-visible = false
+[node name="Settings" type="NinePatchRect" parent="Windows" unique_id=87879253]
 layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture = ExtResource("13_h5gvx")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("5_1kmf2")
 
-[node name="Documents" parent="Windows" unique_id=1537650527 instance=ExtResource("5_c7leg")]
-visible = false
+[node name="ColorRect" type="ColorRect" parent="Windows/Settings" unique_id=324159559]
 layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 42.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0, 0, 0.5019608, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Settings/ColorRect" unique_id=823494890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Control" parent="Windows/Settings/ColorRect/HBoxContainer" unique_id=1160782621]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="Windows/Settings/ColorRect/HBoxContainer/Title" unique_id=1879482921]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.705
+offset_right = 324.245
+offset_bottom = 13.29505
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]WindowName[/b]"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Settings/ColorRect/HBoxContainer/Title" unique_id=1501862467]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_320vu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Settings/ColorRect/HBoxContainer" unique_id=883912532]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+offset_transform_position = Vector2(-4, 0)
+mouse_filter = 2
+theme = ExtResource("2_i70kn")
+
+[node name="Button" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1235914339]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("8_ww78h")
+expand_icon = true
+script = ExtResource("9_h5gvx")
+
+[node name="Button2" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1280002115]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+disabled = true
+icon = ExtResource("10_8am88")
+expand_icon = true
+
+[node name="Button3" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=881563255]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("11_sl2cf")
+expand_icon = true
+script = ExtResource("12_nuhqm")
+
+[node name="Window Contents" type="VBoxContainer" parent="Windows/Settings" unique_id=888888206]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="USELESS ASS BUTTONS" type="HBoxContainer" parent="Windows/Settings/Window Contents" unique_id=1791591281]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+
+[node name="Only decorative" type="HBoxContainer" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS" unique_id=1218032052]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
+
+[node name="File" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1015611597]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/File" unique_id=860766293]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=2754880]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/Edit" unique_id=1076931744]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="View" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=35480302]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/View" unique_id=1471776394]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "View"
+horizontal_alignment = 1
+
+[node name="Help" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1290766453]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/Help" unique_id=1328141344]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS" unique_id=1071078131]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scroll Window" type="NinePatchRect" parent="Windows/Settings/Window Contents" unique_id=694706699]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13_ltr8g")
+draw_center = false
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Settings/Window Contents/Scroll Window" unique_id=991263218]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Windows/Settings/Window Contents/Scroll Window/ColorRect" unique_id=18477592]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="Windows/Settings/Window Contents/Scroll Window/ColorRect/ScrollContainer" unique_id=606289862]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="Windows/Settings/Window Contents/Scroll Window/ColorRect/ScrollContainer/GridContainer" unique_id=598155649]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0)
+texture_normal = ExtResource("11_473ky")
+
+[node name="Description" type="NinePatchRect" parent="Windows/Settings/Window Contents" unique_id=447740535]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("13_ltr8g")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Settings/Window Contents/Description" unique_id=182695637]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("15_njsvr")
+
+[node name="Documents" type="NinePatchRect" parent="Windows" unique_id=99774820]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 290.0
+offset_right = 1460.0
+offset_bottom = 790.0
+mouse_filter = 1
+texture = ExtResource("13_h5gvx")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("5_1kmf2")
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Documents" unique_id=1434221614]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 42.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0, 0, 0.5019608, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Documents/ColorRect" unique_id=786971006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Control" parent="Windows/Documents/ColorRect/HBoxContainer" unique_id=935338521]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="Windows/Documents/ColorRect/HBoxContainer/Title" unique_id=722840025]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.705
+offset_right = 324.245
+offset_bottom = 13.29505
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]WindowName[/b]"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Documents/ColorRect/HBoxContainer/Title" unique_id=181988017]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_320vu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Documents/ColorRect/HBoxContainer" unique_id=976691243]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+offset_transform_position = Vector2(-4, 0)
+mouse_filter = 2
+theme = ExtResource("2_i70kn")
+
+[node name="Button" type="Button" parent="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer" unique_id=1235237743]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("8_ww78h")
+expand_icon = true
+script = ExtResource("9_h5gvx")
+
+[node name="Button2" type="Button" parent="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer" unique_id=377375598]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+disabled = true
+icon = ExtResource("10_8am88")
+expand_icon = true
+
+[node name="Button3" type="Button" parent="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer" unique_id=1180169517]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("11_sl2cf")
+expand_icon = true
+script = ExtResource("12_nuhqm")
+
+[node name="Window Contents" type="VBoxContainer" parent="Windows/Documents" unique_id=1998276123]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="USELESS ASS BUTTONS" type="HBoxContainer" parent="Windows/Documents/Window Contents" unique_id=171013064]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+
+[node name="Only decorative" type="HBoxContainer" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS" unique_id=1633326587]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
+
+[node name="File" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=51323052]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/File" unique_id=93346388]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=988624209]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/Edit" unique_id=595374419]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="View" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1735381354]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/View" unique_id=1055610615]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "View"
+horizontal_alignment = 1
+
+[node name="Help" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=486147710]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/Help" unique_id=400713754]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS" unique_id=1865751172]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scroll Window" type="NinePatchRect" parent="Windows/Documents/Window Contents" unique_id=295776010]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13_ltr8g")
+draw_center = false
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Documents/Window Contents/Scroll Window" unique_id=1025823391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Windows/Documents/Window Contents/Scroll Window/ColorRect" unique_id=1625850688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="Windows/Documents/Window Contents/Scroll Window/ColorRect/ScrollContainer" unique_id=221087522]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="Windows/Documents/Window Contents/Scroll Window/ColorRect/ScrollContainer/GridContainer" unique_id=1795743824]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0)
+texture_normal = ExtResource("11_473ky")
+
+[node name="Description" type="NinePatchRect" parent="Windows/Documents/Window Contents" unique_id=1344773822]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("13_ltr8g")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Documents/Window Contents/Description" unique_id=253771046]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("15_njsvr")
+
+[node name="Help" type="NinePatchRect" parent="Windows" unique_id=505129053]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 290.0
+offset_right = 1460.0
+offset_bottom = 790.0
+mouse_filter = 1
+texture = ExtResource("13_h5gvx")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("5_1kmf2")
+
+[node name="Tab" type="ColorRect" parent="Windows/Help" unique_id=187618200]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 42.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0, 0, 0.5019608, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Help/Tab" unique_id=1781926810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Control" parent="Windows/Help/Tab/HBoxContainer" unique_id=2042267050]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="Windows/Help/Tab/HBoxContainer/Title" unique_id=407340553]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.705
+offset_right = 324.245
+offset_bottom = 13.29505
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]WindowName[/b]"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Help/Tab/HBoxContainer/Title" unique_id=166219399]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_320vu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Help/Tab/HBoxContainer" unique_id=1297513118]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+offset_transform_position = Vector2(-4, 0)
+mouse_filter = 2
+theme = ExtResource("2_i70kn")
+
+[node name="Button" type="Button" parent="Windows/Help/Tab/HBoxContainer/HBoxContainer" unique_id=2140418509]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("8_ww78h")
+expand_icon = true
+script = ExtResource("9_h5gvx")
+
+[node name="Button2" type="Button" parent="Windows/Help/Tab/HBoxContainer/HBoxContainer" unique_id=1163376599]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+disabled = true
+icon = ExtResource("10_8am88")
+expand_icon = true
+
+[node name="Button3" type="Button" parent="Windows/Help/Tab/HBoxContainer/HBoxContainer" unique_id=56481421]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("11_sl2cf")
+expand_icon = true
+script = ExtResource("12_nuhqm")
+
+[node name="Window Contents" type="VBoxContainer" parent="Windows/Help" unique_id=709407956]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="USELESS ASS BUTTONS" type="HBoxContainer" parent="Windows/Help/Window Contents" unique_id=867786717]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+
+[node name="Only decorative" type="HBoxContainer" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS" unique_id=2143561233]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
+
+[node name="File" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=439066361]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/File" unique_id=7908982]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1096137680]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/Edit" unique_id=1385762844]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="View" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1060913667]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/View" unique_id=1297995848]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "View"
+horizontal_alignment = 1
+
+[node name="Help" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1247189075]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/Help" unique_id=1916504715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS" unique_id=95999263]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scroll Window" type="NinePatchRect" parent="Windows/Help/Window Contents" unique_id=1617853776]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13_ltr8g")
+draw_center = false
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Help/Window Contents/Scroll Window" unique_id=1194009648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Windows/Help/Window Contents/Scroll Window/ColorRect" unique_id=1342178768]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="Windows/Help/Window Contents/Scroll Window/ColorRect/ScrollContainer" unique_id=1968747554]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="Windows/Help/Window Contents/Scroll Window/ColorRect/ScrollContainer/GridContainer" unique_id=1711916437]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0)
+texture_normal = ExtResource("11_473ky")
+
+[node name="Description" type="NinePatchRect" parent="Windows/Help/Window Contents" unique_id=4556108]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("13_ltr8g")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Help/Window Contents/Description" unique_id=1186104013]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("15_njsvr")
 
 [node name="TaskBar" type="ColorRect" parent="." unique_id=151719506]
 anchors_preset = 12
@@ -529,7 +1374,7 @@ offset_bottom = 40.0
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_x365e")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=232187808]
+[node name="GOES BELOW SHADER" type="ColorRect" parent="." unique_id=232187808]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -539,5 +1384,11 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
 [connection signal="pressed" from="GameButton" to="GameButton" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button3" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button" to="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button3" to="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Help/Tab/HBoxContainer/HBoxContainer/Button" to="Windows/Help/Tab/HBoxContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Help/Tab/HBoxContainer/HBoxContainer/Button3" to="Windows/Help/Tab/HBoxContainer/HBoxContainer/Button3" method="_on_pressed"]
 [connection signal="pressed" from="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" to="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" method="_on_pressed"]
 [connection signal="toggled" from="TaskBar/HBoxContainer/Start" to="TaskBar/HBoxContainer/Start" method="_on_toggled"]

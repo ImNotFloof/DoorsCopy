@@ -5,15 +5,20 @@ var offset : Vector2
 var closed = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$'.'.gui_input.connect(_on_gui_input)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if not $'.'.visible:
+		$'.'.MOUSE_FILTER_IGNORE
+	else:
+		$".".MOUSE_FILTER_PASS
 	if dragging:
 		self.position = get_viewport().get_mouse_position() - offset
 
 func _on_gui_input(event: InputEvent):
+	
 	if !dragging and event.is_action_pressed("left_click"):
 		var mouse_pos = get_viewport().get_mouse_position()
 		offset = mouse_pos - self.position
