@@ -15,17 +15,14 @@ func _process(delta: float) -> void:
 		damageBool = true
 	else:
 		damageBool = false
-	if player_in_area and damageBool:
+	if player_in_area and damageBool and Global.SFDMG == false:
 		var player = get_tree().current_scene.find_child("Player")
 		player.Health -= damage
 		$damageInterval.start()
-	
-	
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
 		player_in_area = true
-
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":

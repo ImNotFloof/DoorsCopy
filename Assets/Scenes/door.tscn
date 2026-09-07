@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ch6i5kdxsekfx" path="res://Assets/Scipts/door.gd" id="1_8tqrq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1.4619141, 2.4140015, 1)
 
 [sub_resource type="Animation" id="Animation_remfd"]
 length = 0.001
@@ -46,7 +47,7 @@ script = ExtResource("1_8tqrq")
 [node name="Area3D" type="Area3D" parent="." unique_id=1500373213]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=529595471]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1.5, 0, 0, -0.62481534)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23095703, -0.058685303, -0.62481534)
 shape = SubResource("BoxShape3D_g4v7s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=289245732]

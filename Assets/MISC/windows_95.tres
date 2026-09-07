@@ -1017,6 +1017,22 @@ border_color = Color(0.4627451, 0.6745098, 0.69411767, 0.37254903)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_of8w3"]
+texture = ExtResource("2_ikkse")
+texture_margin_left = 6.0
+texture_margin_top = 5.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jmln"]
+texture = ExtResource("3_1tho0")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8es6"]
 texture = ExtResource("3_1tho0")
 texture_margin_left = 2.0
@@ -1103,6 +1119,12 @@ Desktop_Button/styles/pressed = SubResource("StyleBoxFlat_ld7oy")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 32
 Label/fonts/font = ExtResource("1_ywrxg")
+MenuButton/styles/disabled = SubResource("StyleBoxTexture_fne1k")
+PopupMenu/colors/font_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
+PopupMenu/colors/font_hover_color = Color(0.875, 0.875, 0.875, 1)
+PopupMenu/fonts/font = ExtResource("1_ywrxg")
+PopupMenu/styles/hover = SubResource("StyleBoxTexture_of8w3")
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_3jmln")
 TabContainer/colors/font_hovered_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
 TabContainer/colors/font_selected_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
 TabContainer/colors/font_unselected_color = Color(0.18431373, 0.18431373, 0.18431373, 1)

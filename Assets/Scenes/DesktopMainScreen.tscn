@@ -1,21 +1,20 @@
-[gd_scene format=3 uid="uid://cl3rkni5a4aqk"]
+[gd_scene format=3 uid="uid://b3jqiokc10xko"]
 
-[ext_resource type="Shader" uid="uid://dn3kdlhadykk0" path="res://Assets/MISC/Desktop.gdshader" id="1_kxpr5"]
-[ext_resource type="Texture2D" uid="uid://dnta68k63slrw" path="res://Assets/Images/a7a20e9a4c0c5ed6af6cbaf3c268d701.jpg" id="1_nnm0i"]
-[ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="2_nw76e"]
-[ext_resource type="Script" uid="uid://caw6dst1oymld" path="res://Assets/Scipts/game_button.gd" id="3_3jx0j"]
-[ext_resource type="Texture2D" uid="uid://cnd8jhciddjeg" path="res://Assets/Images/Scan CD.png" id="3_nw76e"]
-[ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Start.png" id="4_l5xuu"]
-[ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Run Program.png" id="5_kxpr5"]
-[ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/StartButton.gd" id="5_of8w3"]
-[ext_resource type="Texture2D" uid="uid://b1pl3247p02ie" path="res://Assets/Images/UI/cursor.png" id="7_3v306"]
-[ext_resource type="Script" uid="uid://bt5p7lc06abcx" path="res://Assets/Scipts/Cursor.gd" id="8_of8w3"]
-[ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/clock.gd" id="9_m3cyw"]
-[ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="9_nc3c7"]
-[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/UI/ButtonNormal.png" id="10_36ojc"]
+[ext_resource type="Texture2D" uid="uid://dnta68k63slrw" path="res://Assets/Images/a7a20e9a4c0c5ed6af6cbaf3c268d701.jpg" id="1_wpwno"]
+[ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="2_dtaly"]
+[ext_resource type="Texture2D" uid="uid://cnd8jhciddjeg" path="res://Assets/Images/Scan CD.png" id="3_r3e5j"]
+[ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="4_hfuyl"]
+[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/UI/ButtonNormal.png" id="5_yriia"]
+[ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Start.png" id="6_jehox"]
+[ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/StartButton.gd" id="7_8r80h"]
+[ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Run Program.png" id="8_3t603"]
+[ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/clock.gd" id="9_puusn"]
+[ext_resource type="Texture2D" uid="uid://b1pl3247p02ie" path="res://Assets/Images/UI/cursor.png" id="10_1d3dn"]
+[ext_resource type="Script" uid="uid://bt5p7lc06abcx" path="res://Assets/Scipts/Cursor.gd" id="11_dpirc"]
+[ext_resource type="Shader" uid="uid://dn3kdlhadykk0" path="res://Assets/MISC/Desktop.gdshader" id="12_tp3bp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
-shader = ExtResource("1_kxpr5")
+shader = ExtResource("12_tp3bp")
 shader_parameter/brightness = 1.226000058235
 shader_parameter/contrast = 1.08
 shader_parameter/saturation = 1.1
@@ -47,7 +46,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_nnm0i")
+texture = ExtResource("1_wpwno")
 
 [node name="GameButton" type="Button" parent="." unique_id=2059911867]
 anchors_preset = 8
@@ -61,11 +60,10 @@ offset_right = 48.0
 offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_dtaly")
 theme_type_variation = &"Desktop_Button"
 action_mode = 0
 keep_pressed_outside = true
-script = ExtResource("3_3jx0j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameButton" unique_id=1830319871]
 layout_mode = 1
@@ -81,7 +79,7 @@ layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, 15)
 offset_transform_scale = Vector2(1, 2)
-texture = ExtResource("3_nw76e")
+texture = ExtResource("3_r3e5j")
 
 [node name="Label" type="Label" parent="GameButton/VBoxContainer" unique_id=827954620]
 layout_mode = 2
@@ -143,7 +141,7 @@ offset_right = 500.0
 offset_bottom = 95.0
 scale = Vector2(1.75, 4.17)
 theme_override_colors/default_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
-theme_override_fonts/normal_font = ExtResource("9_nc3c7")
+theme_override_fonts/normal_font = ExtResource("4_hfuyl")
 bbcode_enabled = true
 text = "[b]Windows[/b]95"
 fit_content = true
@@ -172,7 +170,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("10_36ojc")
+texture = ExtResource("5_yriia")
 draw_center = false
 patch_margin_left = 2
 patch_margin_top = 2
@@ -195,29 +193,29 @@ alignment = 1
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(1, 0.9)
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_dtaly")
 toggle_mode = true
 text = "Start"
-icon = ExtResource("4_l5xuu")
-script = ExtResource("5_of8w3")
+icon = ExtResource("6_jehox")
+script = ExtResource("7_8r80h")
 
 [node name="Clock" type="Button" parent="TaskBar/HBoxContainer" unique_id=807426216]
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(1, 0.9)
-theme = ExtResource("2_nw76e")
+theme = ExtResource("2_dtaly")
 theme_type_variation = &"clock"
 disabled = true
 text = "00:00"
-icon = ExtResource("5_kxpr5")
-script = ExtResource("9_m3cyw")
+icon = ExtResource("8_3t603")
+script = ExtResource("9_puusn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1239548530]
 position = Vector2(892.99994, 533)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("7_3v306")
+texture = ExtResource("10_1d3dn")
 centered = false
-script = ExtResource("8_of8w3")
+script = ExtResource("11_dpirc")
 
 [node name="SHADER OVERLAY" type="ColorRect" parent="." unique_id=2034214638]
 material = SubResource("ShaderMaterial_yf5fn")
@@ -233,5 +231,4 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[connection signal="pressed" from="GameButton" to="GameButton" method="_on_pressed"]
 [connection signal="toggled" from="TaskBar/HBoxContainer/Start" to="TaskBar/HBoxContainer/Start" method="_on_toggled"]
