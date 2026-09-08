@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func _on_button_pressed():
 	
-	coorWindow = %Windows.find_child(button.name)
+	coorWindow = %Windows.find_child(button.name, false)
 	coorWindow.closed = false
 	coorWindow.visible = !coorWindow.visible
 	coorWindow.move_to_front()

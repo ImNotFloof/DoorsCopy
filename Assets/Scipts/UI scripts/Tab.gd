@@ -6,7 +6,7 @@ var creator = null
 
 # Called when the node enters the scene tree for the first time.
 func setup_node():
-	coorWindow = %Windows.find_child(script_parent.name)
+	coorWindow = %Windows.find_child(script_parent.name, false)
 	script_parent.pressed.connect(_on_button_pressed)
 
 
