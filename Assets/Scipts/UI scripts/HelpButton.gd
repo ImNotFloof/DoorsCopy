@@ -1,6 +1,6 @@
 extends Button
 
-@onready var texts = $".."/".."/".."/"Scroll Window"/"ColorRect"/"Control"
+@onready var texts = $".."/".."/".."/"Text holder"/"ColorRect"/"Control"
 var coorText
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

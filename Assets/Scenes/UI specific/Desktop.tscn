@@ -22,15 +22,34 @@
 [ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/Desktop UI/ButtonNormal.png" id="13_h5gvx"]
 [ext_resource type="Texture2D" uid="uid://6e8avqrbr272" path="res://Assets/Images/Desktop UI/Statusbar.png" id="13_ltr8g"]
 [ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Desktop UI/Start.png" id="14_8am88"]
+[ext_resource type="Texture2D" uid="uid://jbq7ov1xt2ds" path="res://Assets/Images/Desktop UI/Time.png" id="14_h5gvx"]
+[ext_resource type="Texture2D" uid="uid://cxxix46102p7t" path="res://Assets/Images/Desktop UI/Sound_Recorder_1995.webp" id="15_ltr8g"]
 [ext_resource type="Texture2D" uid="uid://dconoiby6vpfp" path="res://Assets/Images/Desktop UI/Drag Size icon.png" id="15_njsvr"]
+[ext_resource type="Texture2D" uid="uid://bay8mdpkiwk8n" path="res://Assets/Images/Desktop UI/SIcon.png" id="15_nuhqm"]
 [ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/UI scripts/StartButton.gd" id="15_sl2cf"]
+[ext_resource type="Texture2D" uid="uid://bpnqg3b4qluil" path="res://Assets/Images/Desktop UI/slider.png" id="16_ltr8g"]
 [ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Desktop UI/Run Program.png" id="16_nuhqm"]
 [ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/UI scripts/clock.gd" id="17_ltr8g"]
+[ext_resource type="Texture2D" uid="uid://blgvmxl02ifig" path="res://Assets/Images/Desktop UI/Tick.png.png" id="17_njsvr"]
 [ext_resource type="Script" uid="uid://b6sh7oa03wct6" path="res://Assets/Scipts/UI scripts/HelpButton.gd" id="18_473ky"]
 [ext_resource type="Texture2D" uid="uid://b1pl3247p02ie" path="res://Assets/Images/Desktop UI/cursor.png" id="18_njsvr"]
 [ext_resource type="Script" uid="uid://bt5p7lc06abcx" path="res://Assets/Scipts/UI scripts/Cursor.gd" id="19_7g4r3"]
 [ext_resource type="Script" uid="uid://lk0ulsjy4lnj" path="res://Assets/Scipts/UI scripts/HelpClose.gd" id="19_ww78h"]
 [ext_resource type="Shader" uid="uid://dn3kdlhadykk0" path="res://Assets/MISC/Desktop.gdshader" id="20_ypai7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf5fn"]
+texture = ExtResource("16_ltr8g")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 4.0
+texture_margin_bottom = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+region_rect = Rect2(0, 0, 10, 8)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57qmd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0u6y"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
 shader = ExtResource("20_ypai7")
@@ -307,7 +326,6 @@ mouse_filter = 2
 theme = ExtResource("2_i70kn")
 
 [node name="Settings" type="NinePatchRect" parent="Windows" unique_id=87879253]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -387,7 +405,7 @@ offset_transform_position = Vector2(-4, 0)
 mouse_filter = 2
 theme = ExtResource("2_i70kn")
 
-[node name="Button" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1235914339]
+[node name="Minimize" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1235914339]
 layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_enabled = true
@@ -396,7 +414,7 @@ icon = ExtResource("8_ww78h")
 expand_icon = true
 script = ExtResource("9_h5gvx")
 
-[node name="Button2" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1280002115]
+[node name="blank" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1280002115]
 layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_enabled = true
@@ -405,7 +423,7 @@ disabled = true
 icon = ExtResource("10_8am88")
 expand_icon = true
 
-[node name="Button3" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=881563255]
+[node name="Exit" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=881563255]
 layout_mode = 2
 size_flags_horizontal = 3
 offset_transform_enabled = true
@@ -523,50 +541,120 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Scroll Window" type="NinePatchRect" parent="Windows/Settings/Window Contents" unique_id=694706699]
+[node name="Tabs" type="TabContainer" parent="Windows/Settings/Window Contents" unique_id=12939850]
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("13_ltr8g")
-draw_center = false
+current_tab = 1
+
+[node name="Controls" type="Control" parent="Windows/Settings/Window Contents/Tabs" unique_id=621853994]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Audio" type="Control" parent="Windows/Settings/Window Contents/Tabs" unique_id=1600101634]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Settings/Window Contents/Tabs/Audio" unique_id=1635813742]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 21.0
+offset_right = -21.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Playback" type="NinePatchRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer" unique_id=1886062936]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_h5gvx")
 patch_margin_left = 2
 patch_margin_top = 2
 patch_margin_right = 2
 patch_margin_bottom = 2
 
-[node name="ColorRect" type="ColorRect" parent="Windows/Settings/Window Contents/Scroll Window" unique_id=991263218]
+[node name="section name" type="Label" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback" unique_id=425662092]
+z_index = 1
+layout_mode = 0
+offset_left = 17.485
+offset_top = -6.28
+offset_right = 82.28
+offset_bottom = 9.719999
+theme_override_font_sizes/font_size = 16
+text = "Playback"
+horizontal_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/section name" unique_id=198772281]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = -2.0
-offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 3
+color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Windows/Settings/Window Contents/Scroll Window/ColorRect" unique_id=18477592]
+[node name="Control" type="HBoxContainer" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback" unique_id=939960986]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_left = 0.02
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.38
+offset_top = 13.83
+offset_bottom = 13.830009
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 3
-draw_focus_border = true
 
-[node name="GridContainer" type="GridContainer" parent="Windows/Settings/Window Contents/Scroll Window/ColorRect/ScrollContainer" unique_id=606289862]
+[node name="TextureRect" type="TextureRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control" unique_id=1391753243]
+layout_mode = 2
+texture = ExtResource("15_ltr8g")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control" unique_id=1026380312]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
-columns = 4
 
-[node name="TextureButton" type="TextureButton" parent="Windows/Settings/Window Contents/Scroll Window/ColorRect/ScrollContainer/GridContainer" unique_id=598155649]
+[node name="Low" type="Label" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer" unique_id=1166214092]
 layout_mode = 2
-offset_transform_enabled = true
-offset_transform_pivot_ratio = Vector2(0, 0)
-texture_normal = ExtResource("11_473ky")
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+text = "Low"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer" unique_id=1594291442]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer/Control" unique_id=713738163]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/tick_offset = 10
+theme_override_icons/grabber = ExtResource("15_nuhqm")
+theme_override_icons/grabber_highlight = ExtResource("15_nuhqm")
+theme_override_icons/grabber_disabled = ExtResource("15_nuhqm")
+theme_override_icons/tick = ExtResource("17_njsvr")
+theme_override_styles/slider = SubResource("StyleBoxTexture_yf5fn")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_57qmd")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_d0u6y")
+step = 10.0
+value = 100.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="High" type="Label" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer" unique_id=1058804910]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+text = "High"
+horizontal_alignment = 1
 
 [node name="Description" type="NinePatchRect" parent="Windows/Settings/Window Contents" unique_id=447740535]
 layout_mode = 2
@@ -874,6 +962,7 @@ pivot_offset = Vector2(40, 40)
 texture = ExtResource("15_njsvr")
 
 [node name="Help" type="NinePatchRect" parent="Windows" unique_id=505129053]
+visible = false
 layout_mode = 0
 offset_left = 460.0
 offset_top = 290.0
@@ -1066,11 +1155,11 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Help/Window Contents" unique_id=434664738]
+[node name="Actual contents" type="HBoxContainer" parent="Windows/Help/Window Contents" unique_id=434664738]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Scroll Window" type="NinePatchRect" parent="Windows/Help/Window Contents/HBoxContainer" unique_id=1617853776]
+[node name="Text holder" type="NinePatchRect" parent="Windows/Help/Window Contents/Actual contents" unique_id=1617853776]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -1081,7 +1170,7 @@ patch_margin_top = 2
 patch_margin_right = 2
 patch_margin_bottom = 2
 
-[node name="ColorRect" type="ColorRect" parent="Windows/Help/Window Contents/HBoxContainer/Scroll Window" unique_id=1194009648]
+[node name="ColorRect" type="ColorRect" parent="Windows/Help/Window Contents/Actual contents/Text holder" unique_id=1194009648]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1094,7 +1183,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="Windows/Help/Window Contents/HBoxContainer/Scroll Window/ColorRect" unique_id=1062550358]
+[node name="Control" type="Control" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect" unique_id=1062550358]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1106,7 +1195,7 @@ offset_bottom = -37.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Welcome" type="RichTextLabel" parent="Windows/Help/Window Contents/HBoxContainer/Scroll Window/ColorRect/Control" unique_id=1998024384]
+[node name="Welcome" type="RichTextLabel" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect/Control" unique_id=1998024384]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1126,7 +1215,7 @@ GOOD LUCK.
 DONT DIE"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="Windows/Help/Window Contents/HBoxContainer/Scroll Window/ColorRect/Control/Welcome" unique_id=651810978]
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect/Control/Welcome" unique_id=651810978]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -1138,7 +1227,7 @@ theme_override_font_sizes/font_size = 12
 text = "UI made by Floof :P"
 horizontal_alignment = 3
 
-[node name="Tips" type="RichTextLabel" parent="Windows/Help/Window Contents/HBoxContainer/Scroll Window/ColorRect/Control" unique_id=1772771061]
+[node name="Tips" type="RichTextLabel" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect/Control" unique_id=1772771061]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1160,12 +1249,12 @@ again...
 [b]DONT DIE"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="Windows/Help/Window Contents/HBoxContainer" unique_id=303321020]
+[node name="Buttons" type="Control" parent="Windows/Help/Window Contents/Actual contents" unique_id=303321020]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Help/Window Contents/HBoxContainer/Control" unique_id=1920724232]
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Help/Window Contents/Actual contents/Buttons" unique_id=1920724232]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1180,7 +1269,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 31
 
-[node name="Welcome" type="Button" parent="Windows/Help/Window Contents/HBoxContainer/Control/VBoxContainer" unique_id=2038231080]
+[node name="Welcome" type="Button" parent="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer" unique_id=2038231080]
 layout_mode = 2
 size_flags_vertical = 3
 offset_transform_enabled = true
@@ -1189,14 +1278,14 @@ button_pressed = true
 text = "Welcome!"
 script = ExtResource("18_473ky")
 
-[node name="Tips" type="Button" parent="Windows/Help/Window Contents/HBoxContainer/Control/VBoxContainer" unique_id=1418010186]
+[node name="Tips" type="Button" parent="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer" unique_id=1418010186]
 layout_mode = 2
 size_flags_vertical = 3
 toggle_mode = true
 text = "Tips"
 script = ExtResource("18_473ky")
 
-[node name="close" type="Button" parent="Windows/Help/Window Contents/HBoxContainer/Control/VBoxContainer" unique_id=95926049]
+[node name="close" type="Button" parent="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer" unique_id=95926049]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Close"
@@ -1464,11 +1553,11 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
 [connection signal="pressed" from="GameButton" to="GameButton" method="_on_pressed"]
-[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button" method="_on_pressed"]
-[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button3" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Minimize" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Minimize" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Exit" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Exit" method="_on_pressed"]
 [connection signal="pressed" from="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button" to="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button3" to="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button3" method="_on_pressed"]
 [connection signal="pressed" from="Windows/Help/Tab/HBoxContainer/Title/Button3" to="Windows/Help/Tab/HBoxContainer/Title/Button3" method="_on_pressed"]
-[connection signal="pressed" from="Windows/Help/Window Contents/HBoxContainer/Control/VBoxContainer/close" to="Windows/Help/Window Contents/HBoxContainer/Control/VBoxContainer/close" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer/close" to="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer/close" method="_on_pressed"]
 [connection signal="pressed" from="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" to="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" method="_on_pressed"]
 [connection signal="toggled" from="TaskBar/HBoxContainer/Start" to="TaskBar/HBoxContainer/Start" method="_on_toggled"]
