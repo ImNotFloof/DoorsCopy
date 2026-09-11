@@ -1,0 +1,304 @@
+[gd_scene format=3 uid="uid://bhd4crtagfudp"]
+
+[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/Desktop UI/ButtonNormal.png" id="1_l5fae"]
+[ext_resource type="Script" uid="uid://cgmytp4nuatfm" path="res://Assets/Scipts/UI scripts/WindowControl.gd" id="2_vf4d3"]
+[ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="3_id45i"]
+[ext_resource type="FontFile" uid="uid://cdkm0a0xsxfbh" path="res://Assets/MISC/ms-sans-serif-bold.otf.woff2" id="4_5gce4"]
+[ext_resource type="Texture2D" uid="uid://dfhixxmidho8d" path="res://Assets/Images/Desktop UI/Settings.png" id="5_32mrj"]
+[ext_resource type="Texture2D" uid="uid://cygdrccnk7atp" path="res://Assets/Images/Desktop UI/Minimize.png" id="6_tjll8"]
+[ext_resource type="Texture2D" uid="uid://do8kkpqx1s2mc" path="res://Assets/Images/Desktop UI/Maximize.png" id="7_7ion6"]
+[ext_resource type="Script" uid="uid://b36er1hcroyp8" path="res://Assets/Scipts/UI scripts/Minimize.gd" id="7_id45i"]
+[ext_resource type="Texture2D" uid="uid://s7cjj2brtkpb" path="res://Assets/Images/Desktop UI/Close.png" id="8_3a2er"]
+[ext_resource type="Texture2D" uid="uid://6e8avqrbr272" path="res://Assets/Images/Desktop UI/Statusbar.png" id="9_746j1"]
+[ext_resource type="Script" uid="uid://bp2adkc4p5yk8" path="res://Assets/Scipts/UI scripts/CloseWindow.gd" id="9_vf4d3"]
+[ext_resource type="Texture2D" uid="uid://djbtvmc26lm22" path="res://Assets/Images/Desktop UI/My Computer.png" id="10_7auxe"]
+[ext_resource type="Texture2D" uid="uid://dconoiby6vpfp" path="res://Assets/Images/Desktop UI/Drag Size icon.png" id="11_3cj7t"]
+
+[node name="NinePatchRect" type="NinePatchRect" unique_id=410319655]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture = ExtResource("1_l5fae")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("2_vf4d3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=110844531]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 42.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0, 0, 0.5019608, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=1447866027]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Control" parent="ColorRect/HBoxContainer" unique_id=487300282]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="ColorRect/HBoxContainer/Title" unique_id=383967160]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.705
+offset_right = 324.245
+offset_bottom = 13.29505
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("3_id45i")
+theme_override_fonts/bold_font = ExtResource("4_5gce4")
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]WindowName[/b]"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HBoxContainer/Title" unique_id=1933196428]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_32mrj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/HBoxContainer" unique_id=541716418]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+offset_transform_position = Vector2(-4, 0)
+mouse_filter = 2
+theme = ExtResource("3_id45i")
+
+[node name="Button" type="Button" parent="ColorRect/HBoxContainer/HBoxContainer" unique_id=1692512232]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("6_tjll8")
+expand_icon = true
+script = ExtResource("7_id45i")
+
+[node name="Button2" type="Button" parent="ColorRect/HBoxContainer/HBoxContainer" unique_id=310669706]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+disabled = true
+icon = ExtResource("7_7ion6")
+expand_icon = true
+
+[node name="Button3" type="Button" parent="ColorRect/HBoxContainer/HBoxContainer" unique_id=473719543]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("8_3a2er")
+expand_icon = true
+script = ExtResource("9_vf4d3")
+
+[node name="Window Contents" type="VBoxContainer" parent="." unique_id=396892133]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="USELESS ASS BUTTONS" type="HBoxContainer" parent="Window Contents" unique_id=1835776649]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+theme = ExtResource("3_id45i")
+
+[node name="Only decorative" type="HBoxContainer" parent="Window Contents/USELESS ASS BUTTONS" unique_id=22278815]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
+
+[node name="File" type="Control" parent="Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1503552007]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Window Contents/USELESS ASS BUTTONS/Only decorative/File" unique_id=357499595]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="Control" parent="Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=446957724]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Window Contents/USELESS ASS BUTTONS/Only decorative/Edit" unique_id=1045970342]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="View" type="Control" parent="Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1528635718]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Window Contents/USELESS ASS BUTTONS/Only decorative/View" unique_id=1831718925]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "View"
+horizontal_alignment = 1
+
+[node name="Help" type="Control" parent="Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=353706179]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Window Contents/USELESS ASS BUTTONS/Only decorative/Help" unique_id=1432883831]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Window Contents/USELESS ASS BUTTONS" unique_id=391456182]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scroll Window" type="NinePatchRect" parent="Window Contents" unique_id=2112975493]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_746j1")
+draw_center = false
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="Window Contents/Scroll Window" unique_id=2119759011]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Window Contents/Scroll Window/ColorRect" unique_id=2054394202]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="Window Contents/Scroll Window/ColorRect/ScrollContainer" unique_id=2115715192]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="Window Contents/Scroll Window/ColorRect/ScrollContainer/GridContainer" unique_id=457378149]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0)
+texture_normal = ExtResource("10_7auxe")
+
+[node name="Description" type="NinePatchRect" parent="Window Contents" unique_id=1653935051]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("9_746j1")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="Window Contents/Description" unique_id=1827472271]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("11_3cj7t")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/HBoxContainer/Button" to="ColorRect/HBoxContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/HBoxContainer/Button3" to="ColorRect/HBoxContainer/HBoxContainer/Button3" method="_on_pressed"]

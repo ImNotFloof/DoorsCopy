@@ -12,7 +12,9 @@ var rot = null
 func _ready() -> void:
 	room = get_parent()
 	doorNum = room.name
-	nextNum = "A-" + str(int(doorNum.split("-")[1])+1)
+
+	nextNum = "A-%03d" % (int(doorNum.split("-")[1])+1)
+	
 	
 	
 	%Label3D.text=doorNum

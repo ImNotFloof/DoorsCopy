@@ -1,0 +1,1563 @@
+[gd_scene format=3 uid="uid://cl3rkni5a4aqk"]
+
+[ext_resource type="Texture2D" uid="uid://dnta68k63slrw" path="res://Assets/Images/Desktop UI/a7a20e9a4c0c5ed6af6cbaf3c268d701.jpg" id="1_l8avd"]
+[ext_resource type="Theme" uid="uid://gmg4ybdthhox" path="res://Assets/MISC/windows_95.tres" id="2_i70kn"]
+[ext_resource type="Script" uid="uid://caw6dst1oymld" path="res://Assets/Scipts/UI scripts/game_button.gd" id="3_yl31h"]
+[ext_resource type="Texture2D" uid="uid://cnd8jhciddjeg" path="res://Assets/Images/Desktop UI/Scan CD.png" id="4_n6d85"]
+[ext_resource type="Script" uid="uid://cgmytp4nuatfm" path="res://Assets/Scipts/UI scripts/WindowControl.gd" id="5_1kmf2"]
+[ext_resource type="FontFile" uid="uid://cdkm0a0xsxfbh" path="res://Assets/MISC/ms-sans-serif-bold.otf.woff2" id="6_473ky"]
+[ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="6_fun03"]
+[ext_resource type="Texture2D" uid="uid://d3nbp3wym3w2g" path="res://Assets/Images/Desktop UI/Documents.png" id="7_dv6ij"]
+[ext_resource type="Texture2D" uid="uid://dbg36lyy27ppc" path="res://Assets/Images/Desktop UI/point down.png" id="8_ebjp5"]
+[ext_resource type="Script" uid="uid://b2a5p6kmdrx5e" path="res://Assets/Scipts/UI scripts/OpenWindow.gd" id="8_i70kn"]
+[ext_resource type="Texture2D" uid="uid://cygdrccnk7atp" path="res://Assets/Images/Desktop UI/Minimize.png" id="8_ww78h"]
+[ext_resource type="Texture2D" uid="uid://dfhixxmidho8d" path="res://Assets/Images/Desktop UI/Settings.png" id="9_320vu"]
+[ext_resource type="Script" uid="uid://b36er1hcroyp8" path="res://Assets/Scipts/UI scripts/Minimize.gd" id="9_h5gvx"]
+[ext_resource type="Texture2D" uid="uid://d3l2il6hfp0jl" path="res://Assets/Images/Desktop UI/Help.png" id="10_1kmf2"]
+[ext_resource type="Texture2D" uid="uid://do8kkpqx1s2mc" path="res://Assets/Images/Desktop UI/Maximize.png" id="10_8am88"]
+[ext_resource type="Texture2D" uid="uid://djbtvmc26lm22" path="res://Assets/Images/Desktop UI/My Computer.png" id="11_473ky"]
+[ext_resource type="Texture2D" uid="uid://s7cjj2brtkpb" path="res://Assets/Images/Desktop UI/Close.png" id="11_sl2cf"]
+[ext_resource type="Script" uid="uid://bp2adkc4p5yk8" path="res://Assets/Scipts/UI scripts/CloseWindow.gd" id="12_nuhqm"]
+[ext_resource type="Script" uid="uid://bjqjfxnblrkbv" path="res://Assets/Scipts/UI scripts/shut_down.gd" id="12_ww78h"]
+[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/Desktop UI/ButtonNormal.png" id="13_h5gvx"]
+[ext_resource type="Texture2D" uid="uid://6e8avqrbr272" path="res://Assets/Images/Desktop UI/Statusbar.png" id="13_ltr8g"]
+[ext_resource type="Texture2D" uid="uid://blocglvkykh83" path="res://Assets/Images/Desktop UI/Start.png" id="14_8am88"]
+[ext_resource type="Texture2D" uid="uid://jbq7ov1xt2ds" path="res://Assets/Images/Desktop UI/Time.png" id="14_h5gvx"]
+[ext_resource type="Texture2D" uid="uid://cxxix46102p7t" path="res://Assets/Images/Desktop UI/Sound_Recorder_1995.webp" id="15_ltr8g"]
+[ext_resource type="Texture2D" uid="uid://dconoiby6vpfp" path="res://Assets/Images/Desktop UI/Drag Size icon.png" id="15_njsvr"]
+[ext_resource type="Texture2D" uid="uid://bay8mdpkiwk8n" path="res://Assets/Images/Desktop UI/SIcon.png" id="15_nuhqm"]
+[ext_resource type="Script" uid="uid://dwnix64v8ljjb" path="res://Assets/Scipts/UI scripts/StartButton.gd" id="15_sl2cf"]
+[ext_resource type="Texture2D" uid="uid://bpnqg3b4qluil" path="res://Assets/Images/Desktop UI/slider.png" id="16_ltr8g"]
+[ext_resource type="Texture2D" uid="uid://bufx7ul1iplem" path="res://Assets/Images/Desktop UI/Run Program.png" id="16_nuhqm"]
+[ext_resource type="Script" uid="uid://qxux1w0242bt" path="res://Assets/Scipts/UI scripts/clock.gd" id="17_ltr8g"]
+[ext_resource type="Texture2D" uid="uid://blgvmxl02ifig" path="res://Assets/Images/Desktop UI/Tick.png.png" id="17_njsvr"]
+[ext_resource type="Script" uid="uid://b6sh7oa03wct6" path="res://Assets/Scipts/UI scripts/HelpButton.gd" id="18_473ky"]
+[ext_resource type="Texture2D" uid="uid://b1pl3247p02ie" path="res://Assets/Images/Desktop UI/cursor.png" id="18_njsvr"]
+[ext_resource type="Script" uid="uid://bt5p7lc06abcx" path="res://Assets/Scipts/UI scripts/Cursor.gd" id="19_7g4r3"]
+[ext_resource type="Script" uid="uid://lk0ulsjy4lnj" path="res://Assets/Scipts/UI scripts/HelpClose.gd" id="19_ww78h"]
+[ext_resource type="Shader" uid="uid://dn3kdlhadykk0" path="res://Assets/MISC/Desktop.gdshader" id="20_ypai7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf5fn"]
+texture = ExtResource("16_ltr8g")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 4.0
+texture_margin_bottom = 2.0
+expand_margin_top = 2.0
+expand_margin_bottom = 2.0
+region_rect = Rect2(0, 0, 10, 8)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57qmd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d0u6y"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
+shader = ExtResource("20_ypai7")
+shader_parameter/brightness = 1.226000058235
+shader_parameter/contrast = 1.08
+shader_parameter/saturation = 1.1
+shader_parameter/gamma = 1.05
+shader_parameter/curvature = 0.050000002375
+shader_parameter/corner_soften = 0.010000000475
+shader_parameter/vignette = 0.150000007125
+shader_parameter/scanline_strength = 0.27200001292
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.2
+shader_parameter/mask_strength = 0.22
+shader_parameter/mask_scale = 1.0
+shader_parameter/chroma_offset_px = 1.6
+shader_parameter/luma_smear_px = 2.2
+shader_parameter/jitter_px = 0.400000019
+shader_parameter/wobble_px = 0.50000002375
+shader_parameter/tape_noise = 0.22
+shader_parameter/tape_lines = 0.35
+shader_parameter/roll_speed = 0.1
+shader_parameter/roll_strength = 0.15
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
+
+[sub_resource type="Animation" id="Animation_3jx0j"]
+resource_name = "JoinGame"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SHADER OVERLAY:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.61, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(118.245, 43.61), Vector2(1208.244, 349.984), Vector2(1920, 1080)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.235, 0.235)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_x365e"]
+resource_name = "JoinGame"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SHADER OVERLAY:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.53333336, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.83333325, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1920, 1080), Vector2(1208.244, 349.984), Vector2(118.245, 43.61), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.235, 0.235), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_rxxrc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SHADER OVERLAY:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GOES BELOW SHADER:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bu5rx"]
+resource_name = "ShutDown"
+length = 0.14
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GOES BELOW SHADER:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 0.02538286),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x365e"]
+_data = {
+&"JoinGame": SubResource("Animation_3jx0j"),
+&"Pause": SubResource("Animation_x365e"),
+&"RESET": SubResource("Animation_rxxrc"),
+&"ShutDown": SubResource("Animation_bu5rx")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=461657659]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1479575793]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l8avd")
+
+[node name="GameButton" type="Button" parent="." unique_id=2059911867]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 48.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_i70kn")
+theme_type_variation = &"Desktop_Button"
+action_mode = 0
+keep_pressed_outside = true
+script = ExtResource("3_yl31h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameButton" unique_id=1830319871]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="TextureRect" type="TextureRect" parent="GameButton/VBoxContainer" unique_id=1942918221]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 15)
+offset_transform_scale = Vector2(1, 2)
+texture = ExtResource("4_n6d85")
+
+[node name="Label" type="Label" parent="GameButton/VBoxContainer" unique_id=827954620]
+layout_mode = 2
+text = "Game"
+horizontal_alignment = 1
+
+[node name="Windows" type="Control" parent="." unique_id=307675604]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_i70kn")
+
+[node name="Settings" type="NinePatchRect" parent="Windows" unique_id=87879253]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -250.0
+offset_right = 500.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+texture = ExtResource("13_h5gvx")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("5_1kmf2")
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Settings" unique_id=324159559]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 42.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0, 0, 0.5019608, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Settings/ColorRect" unique_id=823494890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Control" parent="Windows/Settings/ColorRect/HBoxContainer" unique_id=1160782621]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="Windows/Settings/ColorRect/HBoxContainer/Title" unique_id=1879482921]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.705
+offset_right = 324.245
+offset_bottom = 13.29505
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]WindowName[/b]"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Settings/ColorRect/HBoxContainer/Title" unique_id=1501862467]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_320vu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Settings/ColorRect/HBoxContainer" unique_id=883912532]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+offset_transform_position = Vector2(-4, 0)
+mouse_filter = 2
+theme = ExtResource("2_i70kn")
+
+[node name="Minimize" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1235914339]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("8_ww78h")
+expand_icon = true
+script = ExtResource("9_h5gvx")
+
+[node name="blank" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=1280002115]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+disabled = true
+icon = ExtResource("10_8am88")
+expand_icon = true
+
+[node name="Exit" type="Button" parent="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer" unique_id=881563255]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("11_sl2cf")
+expand_icon = true
+script = ExtResource("12_nuhqm")
+
+[node name="Window Contents" type="VBoxContainer" parent="Windows/Settings" unique_id=888888206]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="USELESS ASS BUTTONS" type="HBoxContainer" parent="Windows/Settings/Window Contents" unique_id=1791591281]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+
+[node name="Only decorative" type="HBoxContainer" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS" unique_id=1218032052]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
+
+[node name="File" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1015611597]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/File" unique_id=860766293]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=2754880]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/Edit" unique_id=1076931744]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="View" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=35480302]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/View" unique_id=1471776394]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "View"
+horizontal_alignment = 1
+
+[node name="Help" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1290766453]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS/Only decorative/Help" unique_id=1328141344]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Settings/Window Contents/USELESS ASS BUTTONS" unique_id=1071078131]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tabs" type="TabContainer" parent="Windows/Settings/Window Contents" unique_id=12939850]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 1
+
+[node name="Controls" type="Control" parent="Windows/Settings/Window Contents/Tabs" unique_id=621853994]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Audio" type="Control" parent="Windows/Settings/Window Contents/Tabs" unique_id=1600101634]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Settings/Window Contents/Tabs/Audio" unique_id=1635813742]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 21.0
+offset_right = -21.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Playback" type="NinePatchRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer" unique_id=1886062936]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("14_h5gvx")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="section name" type="Label" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback" unique_id=425662092]
+z_index = 1
+layout_mode = 0
+offset_left = 17.485
+offset_top = -6.28
+offset_right = 82.28
+offset_bottom = 9.719999
+theme_override_font_sizes/font_size = 16
+text = "Playback"
+horizontal_alignment = 2
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/section name" unique_id=198772281]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[node name="Control" type="HBoxContainer" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback" unique_id=939960986]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_right = 1.0
+anchor_bottom = 0.38
+offset_top = 13.83
+offset_bottom = 13.830009
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control" unique_id=1391753243]
+layout_mode = 2
+texture = ExtResource("15_ltr8g")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control" unique_id=1026380312]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Low" type="Label" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer" unique_id=1166214092]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+text = "Low"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer" unique_id=1594291442]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSlider" type="HSlider" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer/Control" unique_id=713738163]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/tick_offset = 10
+theme_override_icons/grabber = ExtResource("15_nuhqm")
+theme_override_icons/grabber_highlight = ExtResource("15_nuhqm")
+theme_override_icons/grabber_disabled = ExtResource("15_nuhqm")
+theme_override_icons/tick = ExtResource("17_njsvr")
+theme_override_styles/slider = SubResource("StyleBoxTexture_yf5fn")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_57qmd")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_d0u6y")
+step = 10.0
+value = 100.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="High" type="Label" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/Control/HBoxContainer" unique_id=1058804910]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+text = "High"
+horizontal_alignment = 1
+
+[node name="Description" type="NinePatchRect" parent="Windows/Settings/Window Contents" unique_id=447740535]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("13_ltr8g")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Settings/Window Contents/Description" unique_id=182695637]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("15_njsvr")
+
+[node name="Documents" type="NinePatchRect" parent="Windows" unique_id=99774820]
+visible = false
+layout_mode = 0
+offset_left = 460.0
+offset_top = 290.0
+offset_right = 1460.0
+offset_bottom = 790.0
+mouse_filter = 1
+texture = ExtResource("13_h5gvx")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("5_1kmf2")
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Documents" unique_id=1434221614]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 42.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0, 0, 0.5019608, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Documents/ColorRect" unique_id=786971006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Control" parent="Windows/Documents/ColorRect/HBoxContainer" unique_id=935338521]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="Windows/Documents/ColorRect/HBoxContainer/Title" unique_id=722840025]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.705
+offset_right = 324.245
+offset_bottom = 13.29505
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]WindowName[/b]"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Documents/ColorRect/HBoxContainer/Title" unique_id=181988017]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_320vu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Documents/ColorRect/HBoxContainer" unique_id=976691243]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+offset_transform_position = Vector2(-4, 0)
+mouse_filter = 2
+theme = ExtResource("2_i70kn")
+
+[node name="Button" type="Button" parent="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer" unique_id=1235237743]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("8_ww78h")
+expand_icon = true
+script = ExtResource("9_h5gvx")
+
+[node name="Button2" type="Button" parent="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer" unique_id=377375598]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+disabled = true
+icon = ExtResource("10_8am88")
+expand_icon = true
+
+[node name="Button3" type="Button" parent="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer" unique_id=1180169517]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("11_sl2cf")
+expand_icon = true
+script = ExtResource("12_nuhqm")
+
+[node name="Window Contents" type="VBoxContainer" parent="Windows/Documents" unique_id=1998276123]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="USELESS ASS BUTTONS" type="HBoxContainer" parent="Windows/Documents/Window Contents" unique_id=171013064]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+
+[node name="Only decorative" type="HBoxContainer" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS" unique_id=1633326587]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
+
+[node name="File" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=51323052]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/File" unique_id=93346388]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=988624209]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/Edit" unique_id=595374419]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="View" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1735381354]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/View" unique_id=1055610615]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "View"
+horizontal_alignment = 1
+
+[node name="Help" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=486147710]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS/Only decorative/Help" unique_id=400713754]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Documents/Window Contents/USELESS ASS BUTTONS" unique_id=1865751172]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Scroll Window" type="NinePatchRect" parent="Windows/Documents/Window Contents" unique_id=295776010]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("13_ltr8g")
+draw_center = false
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Documents/Window Contents/Scroll Window" unique_id=1025823391]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Windows/Documents/Window Contents/Scroll Window/ColorRect" unique_id=1625850688]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="Windows/Documents/Window Contents/Scroll Window/ColorRect/ScrollContainer" unique_id=221087522]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="TextureButton" type="TextureButton" parent="Windows/Documents/Window Contents/Scroll Window/ColorRect/ScrollContainer/GridContainer" unique_id=1795743824]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_pivot_ratio = Vector2(0, 0)
+texture_normal = ExtResource("11_473ky")
+
+[node name="Description" type="NinePatchRect" parent="Windows/Documents/Window Contents" unique_id=1344773822]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("13_ltr8g")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Documents/Window Contents/Description" unique_id=253771046]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("15_njsvr")
+
+[node name="Help" type="NinePatchRect" parent="Windows" unique_id=505129053]
+visible = false
+layout_mode = 0
+offset_left = 460.0
+offset_top = 290.0
+offset_right = 1460.0
+offset_bottom = 790.0
+mouse_filter = 1
+texture = ExtResource("13_h5gvx")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+script = ExtResource("5_1kmf2")
+
+[node name="Tab" type="ColorRect" parent="Windows/Help" unique_id=187618200]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = -7.0
+offset_bottom = 42.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0, 0, 0.5019608, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Windows/Help/Tab" unique_id=1781926810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Control" parent="Windows/Help/Tab/HBoxContainer" unique_id=2042267050]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Label" type="RichTextLabel" parent="Windows/Help/Tab/HBoxContainer/Title" unique_id=407340553]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -12.705
+offset_right = 324.245
+offset_bottom = 13.29505
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]Help[/b]"
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Help/Tab/HBoxContainer/Title" unique_id=166219399]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("9_320vu")
+
+[node name="Button3" type="Button" parent="Windows/Help/Tab/HBoxContainer/Title" unique_id=56481421]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -17.5
+offset_right = -3.0
+offset_bottom = 17.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.8)
+icon = ExtResource("11_sl2cf")
+expand_icon = true
+script = ExtResource("12_nuhqm")
+
+[node name="Window Contents" type="VBoxContainer" parent="Windows/Help" unique_id=709407956]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 49.0
+offset_right = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="USELESS ASS BUTTONS" type="HBoxContainer" parent="Windows/Help/Window Contents" unique_id=867786717]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+
+[node name="Only decorative" type="HBoxContainer" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS" unique_id=2143561233]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+theme_override_constants/separation = 0
+
+[node name="File" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=439066361]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/File" unique_id=7908982]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "File"
+horizontal_alignment = 1
+
+[node name="Edit" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1096137680]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/Edit" unique_id=1385762844]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit"
+horizontal_alignment = 1
+
+[node name="View" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1060913667]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/View" unique_id=1297995848]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "View"
+horizontal_alignment = 1
+
+[node name="Help" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative" unique_id=1247189075]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS/Only decorative/Help" unique_id=1916504715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -15.5
+offset_right = 22.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Help"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Windows/Help/Window Contents/USELESS ASS BUTTONS" unique_id=95999263]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Actual contents" type="HBoxContainer" parent="Windows/Help/Window Contents" unique_id=434664738]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Text holder" type="NinePatchRect" parent="Windows/Help/Window Contents/Actual contents" unique_id=1617853776]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("13_ltr8g")
+draw_center = false
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Help/Window Contents/Actual contents/Text holder" unique_id=1194009648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect" unique_id=1062550358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 42.0
+offset_top = 37.0
+offset_right = -42.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Welcome" type="RichTextLabel" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect/Control" unique_id=1998024384]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
+theme_override_fonts/normal_font = ExtResource("6_fun03")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[b]WELCOME![/b]
+This game is a passion project based on the hit roblox game doors. The ultimate goal for this game is to get to door ??? without your life being taken away from you by mysterious entities roaming the location. 
+[b]
+GOOD LUCK.
+DONT DIE"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect/Control/Welcome" unique_id=651810978]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 40.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 12
+text = "UI made by Floof :P"
+horizontal_alignment = 3
+
+[node name="Tips" type="RichTextLabel" parent="Windows/Help/Window Contents/Actual contents/Text holder/ColorRect/Control" unique_id=1772771061]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
+theme_override_fonts/normal_font = ExtResource("6_fun03")
+theme_override_fonts/bold_font = ExtResource("6_473ky")
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[b]DANGERS[/b]
+Every door opened has a chance to trigger a random event.
+Random events can be avoided by hiding in a locker however... some events will punish you for doing so
+
+again...
+[b]DONT DIE"
+horizontal_alignment = 1
+
+[node name="Buttons" type="Control" parent="Windows/Help/Window Contents/Actual contents" unique_id=303321020]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Help/Window Contents/Actual contents/Buttons" unique_id=1920724232]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -98.5
+offset_right = 82.0
+offset_bottom = 98.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 31
+
+[node name="Welcome" type="Button" parent="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer" unique_id=2038231080]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+toggle_mode = true
+button_pressed = true
+text = "Welcome!"
+script = ExtResource("18_473ky")
+
+[node name="Tips" type="Button" parent="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer" unique_id=1418010186]
+layout_mode = 2
+size_flags_vertical = 3
+toggle_mode = true
+text = "Tips"
+script = ExtResource("18_473ky")
+
+[node name="close" type="Button" parent="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer" unique_id=95926049]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Close"
+script = ExtResource("19_ww78h")
+
+[node name="Description" type="NinePatchRect" parent="Windows/Help/Window Contents" unique_id=4556108]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+texture = ExtResource("13_ltr8g")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Help/Window Contents/Description" unique_id=1186104013]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(40, 40)
+texture = ExtResource("15_njsvr")
+
+[node name="TaskBar" type="ColorRect" parent="." unique_id=151719506]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[node name="StartMenu" type="Control" parent="TaskBar" unique_id=1055101818]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = 8.0
+offset_top = -299.0
+offset_right = 208.0
+offset_bottom = 1.0
+pivot_offset = Vector2(0, 300)
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TaskBar/StartMenu" unique_id=912388474]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -9
+
+[node name="Windows95strip" type="ColorRect" parent="TaskBar/StartMenu/HBoxContainer" unique_id=1155726037]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+offset_transform_enabled = true
+color = Color(0.50140685, 0.5014064, 0.5014066, 1)
+
+[node name="Control" type="Control" parent="TaskBar/StartMenu/HBoxContainer/Windows95strip" unique_id=467008063]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_right = 40.0
+offset_bottom = -8.0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_rotation = -1.5707964
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TaskBar/StartMenu/HBoxContainer/Windows95strip/Control" unique_id=2076959744]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 96.645
+scale = Vector2(2.165, 1.97)
+theme_override_colors/default_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_fonts/normal_font = ExtResource("6_fun03")
+bbcode_enabled = true
+text = "[b]Windows[/b]95"
+fit_content = true
+scroll_active = false
+
+[node name="Select" type="ColorRect" parent="TaskBar/StartMenu/HBoxContainer" unique_id=569735388]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TaskBar/StartMenu/HBoxContainer/Select" unique_id=1331748282]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+offset_transform_position = Vector2(-36, 0)
+offset_transform_scale = Vector2(1.7, 1)
+theme = ExtResource("2_i70kn")
+alignment = 2
+
+[node name="Documents" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=384580955]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Documents"
+icon = ExtResource("7_dv6ij")
+flat = true
+alignment = 0
+script = ExtResource("8_i70kn")
+
+[node name="TextureRect" type="TextureRect" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Documents" unique_id=1682480572]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("8_ebjp5")
+
+[node name="Settings" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=1895257343]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Settings"
+icon = ExtResource("9_320vu")
+flat = true
+alignment = 0
+script = ExtResource("8_i70kn")
+
+[node name="TextureRect" type="TextureRect" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Settings" unique_id=968897911]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = -1.5707964
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("8_ebjp5")
+
+[node name="Help" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=672555183]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Help"
+icon = ExtResource("10_1kmf2")
+flat = true
+alignment = 0
+script = ExtResource("8_i70kn")
+
+[node name="Shut Down" type="Button" parent="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer" unique_id=353250596]
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("2_i70kn")
+theme_override_font_sizes/font_size = 18
+text = "Shut Down"
+icon = ExtResource("11_473ky")
+alignment = 0
+script = ExtResource("12_ww78h")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TaskBar/StartMenu" unique_id=2135928503]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_h5gvx")
+draw_center = false
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TaskBar" unique_id=1979562130]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Start" type="Button" parent="TaskBar/HBoxContainer" unique_id=724769491]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.9)
+theme = ExtResource("2_i70kn")
+toggle_mode = true
+text = "Start"
+icon = ExtResource("14_8am88")
+script = ExtResource("15_sl2cf")
+
+[node name="Tabs" type="HBoxContainer" parent="TaskBar/HBoxContainer" unique_id=375880093]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Clock" type="Button" parent="TaskBar/HBoxContainer" unique_id=807426216]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1, 0.9)
+theme = ExtResource("2_i70kn")
+theme_type_variation = &"clock"
+disabled = true
+text = "00:00"
+icon = ExtResource("16_nuhqm")
+script = ExtResource("17_ltr8g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1239548530]
+position = Vector2(892.99994, 533)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("18_njsvr")
+centered = false
+script = ExtResource("19_7g4r3")
+
+[node name="SHADER OVERLAY" type="ColorRect" parent="." unique_id=2034214638]
+material = SubResource("ShaderMaterial_yf5fn")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="KEEP ON BOTTOM" type="Control" parent="SHADER OVERLAY" unique_id=1692794782]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=386079565]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_x365e")
+
+[node name="GOES BELOW SHADER" type="ColorRect" parent="." unique_id=232187808]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="pressed" from="GameButton" to="GameButton" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Minimize" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Minimize" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Exit" to="Windows/Settings/ColorRect/HBoxContainer/HBoxContainer/Exit" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button" to="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button3" to="Windows/Documents/ColorRect/HBoxContainer/HBoxContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Help/Tab/HBoxContainer/Title/Button3" to="Windows/Help/Tab/HBoxContainer/Title/Button3" method="_on_pressed"]
+[connection signal="pressed" from="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer/close" to="Windows/Help/Window Contents/Actual contents/Buttons/VBoxContainer/close" method="_on_pressed"]
+[connection signal="pressed" from="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" to="TaskBar/StartMenu/HBoxContainer/Select/VBoxContainer/Shut Down" method="_on_pressed"]
+[connection signal="toggled" from="TaskBar/HBoxContainer/Start" to="TaskBar/HBoxContainer/Start" method="_on_toggled"]

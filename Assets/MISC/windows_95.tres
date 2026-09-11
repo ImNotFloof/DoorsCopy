@@ -1,12 +1,13 @@
 [gd_resource type="Theme" format=4 uid="uid://gmg4ybdthhox"]
 
 [ext_resource type="FontFile" uid="uid://bbvt5848mrnp4" path="res://Assets/MISC/W95F.otf" id="1_ywrxg"]
-[ext_resource type="Texture2D" uid="uid://dh1dis7b4khiq" path="res://Assets/Images/UI/ButtonFocus.png" id="2_ikkse"]
-[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/UI/ButtonNormal.png" id="3_1tho0"]
-[ext_resource type="Texture2D" uid="uid://idp5r733k2pf" path="res://Assets/Images/UI/ButtonPressed.png" id="4_3jmln"]
-[ext_resource type="Texture2D" uid="uid://c2ibspis1wnwa" path="res://Assets/Images/UI/TabFocus.png" id="5_1tho0"]
-[ext_resource type="Texture2D" uid="uid://beif5nnixqfql" path="res://Assets/Images/UI/TabNormal.png" id="6_3jmln"]
-[ext_resource type="Texture2D" uid="uid://jbq7ov1xt2ds" path="res://Assets/Images/UI/Time.png" id="7_3jmln"]
+[ext_resource type="Texture2D" uid="uid://dh1dis7b4khiq" path="res://Assets/Images/Desktop UI/ButtonFocus.png" id="2_ikkse"]
+[ext_resource type="Texture2D" uid="uid://cx2kxofj1uvfl" path="res://Assets/Images/Desktop UI/ButtonNormal.png" id="3_1tho0"]
+[ext_resource type="Texture2D" uid="uid://idp5r733k2pf" path="res://Assets/Images/Desktop UI/ButtonPressed.png" id="4_3jmln"]
+[ext_resource type="Texture2D" uid="uid://c2ibspis1wnwa" path="res://Assets/Images/Desktop UI/TabFocus.png" id="5_1tho0"]
+[ext_resource type="Texture2D" uid="uid://bpnqg3b4qluil" path="res://Assets/Images/Desktop UI/slider.png" id="5_fne1k"]
+[ext_resource type="Texture2D" uid="uid://beif5nnixqfql" path="res://Assets/Images/Desktop UI/TabNormal.png" id="6_3jmln"]
+[ext_resource type="Texture2D" uid="uid://jbq7ov1xt2ds" path="res://Assets/Images/Desktop UI/Time.png" id="7_3jmln"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g4v7s"]
 texture = ExtResource("3_1tho0")
@@ -1017,6 +1018,34 @@ border_color = Color(0.4627451, 0.6745098, 0.69411767, 0.37254903)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0u6y"]
+bg_color = Color(4.235506e-06, 0.658797, 0.85098755, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ld7oy"]
+texture = ExtResource("5_fne1k")
+texture_margin_left = 4.0
+texture_margin_top = 2.0
+texture_margin_right = 4.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_of8w3"]
+texture = ExtResource("2_ikkse")
+texture_margin_left = 6.0
+texture_margin_top = 5.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jmln"]
+texture = ExtResource("3_1tho0")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h8es6"]
 texture = ExtResource("3_1tho0")
 texture_margin_left = 2.0
@@ -1025,6 +1054,7 @@ texture_margin_right = 2.0
 texture_margin_bottom = 2.0
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 60, 24)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1u0y"]
 texture = ExtResource("5_1tho0")
@@ -1047,6 +1077,7 @@ axis_stretch_horizontal = 1
 region_rect = Rect2(0, 0, 60, 24)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7numd"]
+content_margin_left = 6.0
 texture = ExtResource("3_1tho0")
 texture_margin_left = 2.0
 texture_margin_top = 2.0
@@ -1100,9 +1131,17 @@ Desktop_Button/styles/focus = SubResource("StyleBoxFlat_ld7oy")
 Desktop_Button/styles/hover = SubResource("StyleBoxFlat_3gngh")
 Desktop_Button/styles/normal = SubResource("StyleBoxEmpty_g4v7s")
 Desktop_Button/styles/pressed = SubResource("StyleBoxFlat_ld7oy")
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_d0u6y")
+HScrollBar/styles/scroll = SubResource("StyleBoxTexture_ld7oy")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 32
 Label/fonts/font = ExtResource("1_ywrxg")
+MenuButton/styles/disabled = SubResource("StyleBoxTexture_fne1k")
+PopupMenu/colors/font_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
+PopupMenu/colors/font_hover_color = Color(0.875, 0.875, 0.875, 1)
+PopupMenu/fonts/font = ExtResource("1_ywrxg")
+PopupMenu/styles/hover = SubResource("StyleBoxTexture_of8w3")
+PopupMenu/styles/panel = SubResource("StyleBoxTexture_3jmln")
 TabContainer/colors/font_hovered_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
 TabContainer/colors/font_selected_color = Color(0.18431373, 0.18431373, 0.18431373, 1)
 TabContainer/colors/font_unselected_color = Color(0.18431373, 0.18431373, 0.18431373, 1)

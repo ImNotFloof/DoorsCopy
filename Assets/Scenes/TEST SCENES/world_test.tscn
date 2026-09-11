@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://clyg0cjpffqq2" path="res://Assets/Scenes/player.tscn" id="1_isqvj"]
 [ext_resource type="PackedScene" uid="uid://dxaq1wog65ek0" path="res://Assets/Scenes/TEST SCENES/FowardRoom1.tscn" id="2_h6shl"]
+[ext_resource type="PackedScene" uid="uid://ctujfdyt4ybqy" path="res://Assets/Scenes/TEST SCENES/test_entity.tscn" id="3_h6shl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_avm4t"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,4 +43,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="A-000" parent="Rooms" unique_id=1850740981 instance=ExtResource("2_h6shl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.9909434)
 
+[node name="TestEntity" parent="." unique_id=1307755709 instance=ExtResource("3_h6shl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 15.921343)
+
+[editable path="Player"]
+[editable path="Player/Desktop"]
 [editable path="Rooms/A-000"]

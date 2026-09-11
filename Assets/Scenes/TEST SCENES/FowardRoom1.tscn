@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxaq1wog65ek0"]
 
-[ext_resource type="PackedScene" uid="uid://1wplcrooq0d" path="res://Assets/Scenes/door.tscn" id="2_5ksax"]
+[ext_resource type="PackedScene" uid="uid://1wplcrooq0d" path="res://Assets/Scenes/TEST SCENES/door.tscn" id="2_5ksax"]
 
 [node name="Room#" type="Node3D" unique_id=1850740981]
 
