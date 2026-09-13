@@ -23,6 +23,9 @@ size = Vector3(1, 1, 0.18652344)
 
 [node name="Start" type="Marker3D" parent="." unique_id=102949011]
 
+[node name="Middle" type="Marker3D" parent="." unique_id=1163972206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
 [node name="End" type="Marker3D" parent="." unique_id=556675216]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 

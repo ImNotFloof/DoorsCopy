@@ -21,6 +21,8 @@ transparency = 1
 blend_mode = 1
 albedo_color = Color(0.17185354, 0.30394292, 0.30394292, 1)
 
+[sub_resource type="Curve3D" id="Curve3D_h6shl"]
+
 [node name="Node3D" type="Node3D" unique_id=1389890947]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1783245070]
@@ -43,8 +45,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="A-000" parent="Rooms" unique_id=1850740981 instance=ExtResource("2_h6shl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.9909434)
 
-[node name="TestEntity" parent="." unique_id=1307755709 instance=ExtResource("3_h6shl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 15.921343)
+[node name="EntityPathing" type="Path3D" parent="." unique_id=1020339001]
+curve = SubResource("Curve3D_h6shl")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="EntityPathing" unique_id=669061077]
+
+[node name="TestEntity" parent="EntityPathing/PathFollow3D" unique_id=1307755709 instance=ExtResource("3_h6shl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 
 [editable path="Player"]
 [editable path="Player/Desktop"]
