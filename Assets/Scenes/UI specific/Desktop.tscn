@@ -326,6 +326,7 @@ mouse_filter = 2
 theme = ExtResource("2_i70kn")
 
 [node name="Settings" type="NinePatchRect" parent="Windows" unique_id=87879253]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -576,8 +577,20 @@ patch_margin_top = 2
 patch_margin_right = 2
 patch_margin_bottom = 2
 
+[node name="ColorRect" type="ColorRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback" unique_id=198772281]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.485
+offset_top = -6.28
+offset_right = -857.72003
+offset_bottom = -276.28
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
 [node name="section name" type="Label" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback" unique_id=425662092]
-z_index = 1
 layout_mode = 0
 offset_left = 17.485
 offset_top = -6.28
@@ -586,16 +599,6 @@ offset_bottom = 9.719999
 theme_override_font_sizes/font_size = 16
 text = "Playback"
 horizontal_alignment = 2
-
-[node name="ColorRect" type="ColorRect" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback/section name" unique_id=198772281]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.7529412, 0.7529412, 0.7529412, 1)
 
 [node name="Control" type="HBoxContainer" parent="Windows/Settings/Window Contents/Tabs/Audio/VBoxContainer/Playback" unique_id=939960986]
 layout_mode = 1

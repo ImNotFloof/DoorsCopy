@@ -1,7 +1,12 @@
 extends CharacterBody3D
 
 var Health = 100
+var seed = null
+var randomNum = null
+var rng = RandomNumberGenerator.new()
+
 @onready var currHealth = $UI/CanvasLayer/Label.text.split(" ")
+
 
 var paused = false
 const SPEED = 5.0
@@ -12,6 +17,12 @@ const SENSITIVITY = 0.003
 @onready var camera = %Camera3D
 
 func _ready() -> void:
+	seed = randi() #COULD BE SET TO A SOLID INT BUT NOT FOR NOW
+	print(seed)
+	
+	rng.seed = hash(seed)
+	randomNum = rng.randi()
+	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	%Desktop.visible = false
 
@@ -73,3 +84,6 @@ func unpaused():
 	
 	%Desktop.visible = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func Randomize():
+	randomNum = rng.randi()

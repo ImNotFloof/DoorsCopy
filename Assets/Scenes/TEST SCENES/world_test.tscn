@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://boqa3hi7tcgju"]
 
 [ext_resource type="PackedScene" uid="uid://clyg0cjpffqq2" path="res://Assets/Scenes/player.tscn" id="1_isqvj"]
-[ext_resource type="PackedScene" uid="uid://dxaq1wog65ek0" path="res://Assets/Scenes/TEST SCENES/FowardRoom1.tscn" id="2_h6shl"]
-[ext_resource type="PackedScene" uid="uid://ctujfdyt4ybqy" path="res://Assets/Scenes/TEST SCENES/test_entity.tscn" id="3_h6shl"]
+[ext_resource type="PackedScene" uid="uid://dxaq1wog65ek0" path="res://Assets/Scenes/TEST SCENES/RoomSamples/SnakeRoom1.tscn" id="2_h6shl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_avm4t"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -33,12 +32,22 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=691844232]
-transform = Transform3D(100, 0, 0, 0, 0.5, 0, 0, 0, 100, 0, 0, 0)
+transform = Transform3D(100, 0, 0, 0, 0.5, 0, 0, 0, 100, 0, 0, -57.15332)
 use_collision = true
+size = Vector3(1, 1, 2.1430664)
 material = SubResource("StandardMaterial3D_avm4t")
 
 [node name="Player" parent="." unique_id=1653920478 instance=ExtResource("1_isqvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Tabs" parent="Player/Desktop/Windows/Settings/Window Contents" parent_id_path=PackedInt32Array(1653920478, 1529589146, 888888206) index="1" unique_id=12939850]
+current_tab = 0
+
+[node name="Controls" parent="Player/Desktop/Windows/Settings/Window Contents/Tabs" index="1" unique_id=621853994]
+visible = true
+
+[node name="Audio" parent="Player/Desktop/Windows/Settings/Window Contents/Tabs" index="2" unique_id=1600101634]
+visible = false
 
 [node name="Rooms" type="Node3D" parent="." unique_id=2089565787]
 
@@ -49,9 +58,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.9909434)
 curve = SubResource("Curve3D_h6shl")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="EntityPathing" unique_id=669061077]
-
-[node name="TestEntity" parent="EntityPathing/PathFollow3D" unique_id=1307755709 instance=ExtResource("3_h6shl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
 
 [editable path="Player"]
 [editable path="Player/Desktop"]
