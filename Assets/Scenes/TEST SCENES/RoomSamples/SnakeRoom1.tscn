@@ -8,11 +8,6 @@
 transform = Transform3D(10, 0, 0, 0, 3, 0, 0, 0, 10, 5, 1.5, -5)
 size = Vector3(2, 1, 1)
 
-[node name="Label3D" type="Label3D" parent="CSGBox3D" unique_id=1220179281]
-transform = Transform3D(-6.556708e-08, -1.1, 0, 0, -4.8082526e-08, 0, -1.5, 4.8082526e-08, 0, 0, 0.51, 0)
-text = "->"
-font_size = 128
-
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGBox3D" unique_id=1608809897]
 transform = Transform3D(0.98999995, 0, 0, 0, 0.99, 0, 0, 0, 0.98999995, 0, -0.022534996, 0)
 operation = 2
@@ -34,15 +29,35 @@ operation = 2
 size = Vector3(1, 1, 0.14300537)
 
 [node name="Start" type="Marker3D" parent="." unique_id=102949011]
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Start" unique_id=1617544497]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 0, -0.18819827)
+text = "-->"
 
 [node name="Middle" type="Marker3D" parent="." unique_id=1163972206]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -5)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Middle" unique_id=1231705328]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 0, -0.18819827)
+text = "-->"
 
 [node name="Middle2" type="Marker3D" parent="." unique_id=1142363614]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -5)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="Middle2" unique_id=476930502]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 0, -0.18819827)
+text = "-->"
 
 [node name="End" type="Marker3D" parent="." unique_id=556675216]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -10)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="End" unique_id=1640778915]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 0, 0, -0.18819827)
+text = "-->"
 
 [node name="Door" parent="." unique_id=945050413 instance=ExtResource("2_5ksax")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.625, 1.125, 0)

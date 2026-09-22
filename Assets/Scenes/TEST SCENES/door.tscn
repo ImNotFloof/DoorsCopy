@@ -39,6 +39,8 @@ _data = {
 &"door_opening": SubResource("Animation_8tqrq")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
+
 [node name="Door" type="Node3D" unique_id=945050413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0.625)
 script = ExtResource("1_8tqrq")
@@ -55,12 +57,19 @@ libraries/ = SubResource("AnimationLibrary_tdxg0")
 [node name="Door_pivot" type="Node3D" parent="." unique_id=46257552]
 
 [node name="DoorModel" type="CSGBox3D" parent="Door_pivot" unique_id=491195573]
-transform = Transform3D(0.15, 0, 0, 0, 2.25, 0, 0, 0, 1.25, 0, 0, -0.625)
+transform = Transform3D(0.1, 0, 0, 0, 2.25, 0, 0, 0, 1.25, 0, 0, -0.625)
 use_collision = true
 
 [node name="Label3D" type="Label3D" parent="Door_pivot/DoorModel" unique_id=435306271]
 unique_name_in_owner = true
-transform = Transform3D(-6.644131e-08, 0, 1, 0, 1, 0, -1.52, 0, -4.371139e-08, 0.501, 0.2301507, 0)
+transform = Transform3D(-6.64413e-08, 0, 0.99999994, 0, 0.99999994, 0, -1.5199999, 0, -4.3711385e-08, 0.6, 0.23, 0)
 text = "A-000"
 
+[node name="RoomCollision" type="Area3D" parent="." unique_id=106632404]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomCollision" unique_id=971915653]
+transform = Transform3D(1.435, 0, 0, 0, 1.565, 0, 0, 0, 1.205, 0, 0, -0.62)
+shape = SubResource("BoxShape3D_yf5fn")
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="RoomCollision" to="." method="_on_room_collision_body_entered"]

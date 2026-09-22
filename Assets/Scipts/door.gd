@@ -4,6 +4,7 @@ var Rooms = DirAccess.get_files_at("res://Assets/Scenes/TEST SCENES/RoomSamples/
 var doorNum = null
 var nextNum = null
 var nextRoom = null
+var prevRoom = null
 var roomToLoad = null
 var freeRoom = null
 var room = null
@@ -13,7 +14,7 @@ var rot = null
 @onready var player = get_tree().current_scene.find_child("Player", true, false)
 @onready var path = get_tree().current_scene.find_child("EntityPathing", true, false)
 
-var MaxRoomInScene = 3 #Counts the unopened door as a room MUST BE HIGHER THAN 2 AT ALL TIMES
+var MaxRoomInScene = 6 #Counts the unopened door as a room MUST BE HIGHER THAN 2 AT ALL TIMES
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,7 +35,6 @@ func _ready() -> void:
 		freeRoom = get_tree().current_scene.find_child("Rooms", false).find_child(freeRoom, true, false)
 		
 		var secondLastRoom = freeRoom.find_child("Door", true, false).nextRoom
-		print(secondLastRoom.name)
 		secondLastRoom.find_child("AnimationPlayer", true, false).play("RESET")
 		await secondLastRoom.find_child("AnimationPlayer", true, false).animation_finished
 		
@@ -55,7 +55,6 @@ func shrinkPath():
 	for point in room.get_children():
 		if point is Marker3D:
 			var removePoint = path.curve.get_closest_point(point.global_position)
-			print(removePoint)
 			#find index at vector3:
 			for i in range(path.curve.point_count):
 				if path.curve.get_point_position(i) == removePoint:
@@ -69,6 +68,13 @@ func shrinkPath():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func changeRoom(invalidRoom, attemptedRoom):
+	Rooms.erase(invalidRoom)
+	var randomIndex = player.randomNum % Rooms.size()
+	roomToLoad = load("res://Assets/Scenes/TEST SCENES/RoomSamples/" + Rooms[randomIndex])
+	attemptedRoom.destroyRoom()
+	spawnRoom()
 
 func spawnRoom():
 	$Area3D.queue_free()
@@ -80,9 +86,10 @@ func spawnRoom():
 	
 	nextRoom = roomToLoad.instantiate()
 	nextRoom.name = nextNum
+	nextRoom.find_child("Door").prevRoom = room
 	
-	#chance to mirror the room
-	if randi_range(1, 50) % 2 == 0:
+	var mirrored = player.mirrored
+	if mirrored:
 		nextRoom.find_child("CSGBox3D").scale.x *= -1
 		nextRoom.find_child("CSGBox3D").position.x *= -1
 		for marker in nextRoom.find_children("*", "Marker3D", true, false):
@@ -104,3 +111,11 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		$AnimationPlayer.play("door_opening")
 		spawnRoom()
 		$Area3D.set_deferred("monitoring", false)
+
+
+
+func _on_room_collision_body_entered(body: Node3D) -> void:
+	if body.name != "Player":
+		print(body.name)
+		#if body.name.match("A-*"):
+			#print("INTERACTED WITH ANOTHER ROOM, ATTEMPTING TO REGEN")

@@ -1,13 +1,13 @@
 extends CharacterBody3D
 
-var Health = 100
-var seed = null
+#Keys for room gen
+var rseed = null
 var randomNum = null
+var mirrored = false
 var rng = RandomNumberGenerator.new()
 
+var Health = 100
 @onready var currHealth = $UI/CanvasLayer/Label.text.split(" ")
-
-
 var paused = false
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -17,10 +17,11 @@ const SENSITIVITY = 0.003
 @onready var camera = %Camera3D
 
 func _ready() -> void:
-	seed = randi() #COULD BE SET TO A SOLID INT BUT NOT FOR NOW
-	print(seed)
+	rseed = 160169335
+	#COULD BE SET TO A SOLID INT BUT NOT FOR NOW
+	print(rseed)
 	
-	rng.seed = hash(seed)
+	rng.seed = hash(rseed)
 	randomNum = rng.randi()
 	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -31,6 +32,8 @@ func _unhandled_input(event):
 		head.rotate_y(-event.relative.x * SENSITIVITY)
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+
+	
 		
 func _physics_process(delta: float) -> void:
 	
@@ -75,6 +78,9 @@ func _process(delta: float) -> void:
 	if int(currHealth[1]) != Health:
 		currHealth[1] = str(Health)
 		$UI/CanvasLayer/Label.text = "HEALTH: " + str(Health)
+		
+	if Input.is_action_just_pressed("Debug"):
+		pass
 
 func unpaused():
 	print("UNPAUSED!")
@@ -87,3 +93,4 @@ func unpaused():
 
 func Randomize():
 	randomNum = rng.randi()
+	mirrored = rng.randi() % 2 == 1
